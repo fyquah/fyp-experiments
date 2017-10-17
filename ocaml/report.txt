@@ -1,0 +1,1409 @@
+/home/fyquah/dev/fyp/linux/tools/perf/perf report \
+  --branch-history --stdio --no-children
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 5K of event 'cycles'
+# Event count (approx.): 3644148361
+#
+# Overhead  Source:Line                                           Symbol                                          Shared Object             
+# ........  ....................................................  ..............................................  ..........................
+#
+    17.36%  quicksort.ml:10                                       [.] camlQuicksort__code_begin                   code                      
+            |14.46% camlQuicksort__code_begin quicksort.ml:9 (predicted:50.5%)
+            |          |6.94% camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:66.9%)
+            |          |          |3.39% camlQuicksort__code_begin quicksort.ml:9 (iter:76 avg_cycles:0)
+            |          |          |          |3.26% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |2.20% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:34 avg_cycles:0)
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:25.5%)
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (iter:85 avg_cycles:0)
+            |          |          |          |          |          |2.10% camlQuicksort__code_begin quicksort.ml:9 (predicted:78.2%)
+            |          |          |          |          |          |          |1.40% camlQuicksort__code_begin quicksort.ml:10 (iter:36 avg_cycles:0)
+            |          |          |          |          |          |          |          |1.27% camlQuicksort__code_begin quicksort.ml:9 (predicted:82.0%)
+            |          |          |          |          |          |          |          |          |0.96% camlQuicksort__code_begin quicksort.ml:10 (iter:21 avg_cycles:0)
+            |          |          |          |          |          |          |          |          |          |0.81% camlQuicksort__code_begin quicksort.ml:9 (predicted:82.1%)
+            |          |          |          |          |          |          |          |          |          |          |0.58% camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |          |          |          |          |          |          |0.54% camlQuicksort__code_begin quicksort.ml:9 (predicted:92.3%)
+            |          |          |          |          |          |          |0.70% camlQuicksort__code_begin quicksort.ml:9 (iter:18 avg_cycles:0)
+            |          |          |          |          |          |          |          |0.64% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |          |          |          |0.58% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:6 avg_cycles:0)
+            |          |          |          |          |1.00% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:48 avg_cycles:0)
+            |          |          |          |          |          |0.56% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:18 avg_cycles:0)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:59.3%)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (iter:18 avg_cycles:0)
+            |          |          |3.24% camlQuicksort__code_begin quicksort.ml:10 (iter:157 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:74.5%)
+            |          |          |          |1.87% camlQuicksort__code_begin quicksort.ml:10 (iter:144 avg_cycles:0)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:81.3%)
+            |          |          |          |          |1.12% camlQuicksort__code_begin quicksort.ml:10 (iter:108 avg_cycles:0)
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:87.3%)
+            |          |          |          |          |          |0.83% camlQuicksort__code_begin quicksort.ml:10 (iter:108 avg_cycles:0)
+            |          |          |          |          |0.75% camlQuicksort__code_begin quicksort.ml:9 (iter:18 avg_cycles:0)
+            |          |          |          |          |          |0.65% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |          |0.54% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:6 avg_cycles:0)
+            |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:7.7%)
+            |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |1.23% camlQuicksort__code_begin quicksort.ml:9 (iter:20 avg_cycles:0)
+            |          |          |          |          |1.19% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |0.89% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:11 avg_cycles:0)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:32.6%)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (iter:18 avg_cycles:0)
+            |          |          |          |          |          |          |0.81% camlQuicksort__code_begin quicksort.ml:9 (predicted:76.9%)
+            |          |6.63% camlQuicksort__code_begin quicksort.ml:9
+            |          |          |6.27% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |3.08% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:52 avg_cycles:0)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:53.7%)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:49.0%)
+            |          |          |          |          |1.96% camlQuicksort__code_begin quicksort.ml:9 (iter:94 avg_cycles:0)
+            |          |          |          |          |          |1.90% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:30 avg_cycles:0)
+            |          |          |          |          |          |          |1.44% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:18 avg_cycles:0)
+            |          |          |          |          |          |          |          |1.04% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:14 avg_cycles:0)
+            |          |          |          |          |          |          |          |          |0.65% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |1.12% camlQuicksort__code_begin quicksort.ml:10 (iter:115 avg_cycles:0)
+            |          |          |          |          |          |1.11% camlQuicksort__code_begin quicksort.ml:9 (predicted:72.2%)
+            |          |          |          |          |          |          |0.73% camlQuicksort__code_begin quicksort.ml:10 (iter:48 avg_cycles:0)
+            |          |          |          |3.04% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:146 avg_cycles:0)
+            |          |          |          |          |1.92% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:120 avg_cycles:0)
+            |          |          |          |          |          |1.02% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:24 avg_cycles:0)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:53.1%)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |          |0.92% camlQuicksort__code_begin quicksort.ml:9 (predicted:38.6%)
+            |          |          |          |          |          |          |          |0.71% camlQuicksort__code_begin quicksort.ml:9 (iter:21 avg_cycles:0)
+            |          |          |          |          |          |          |          |          |0.58% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |0.85% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:72 avg_cycles:0)
+            |          |          |          |          |          |          |0.58% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:60 avg_cycles:0)
+            |          |          |          |          |1.04% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:40 avg_cycles:0)
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:62.0%)
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:40.0%)
+            |          |          |          |          |          |0.77% camlQuicksort__code_begin quicksort.ml:9 (iter:30 avg_cycles:0)
+            |          |          |          |          |          |          |0.71% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:6 avg_cycles:0)
+            |          |0.90% camlQuicksort__code_begin quicksort.ml:8
+            |          |          camlQuicksort__code_begin quicksort.ml:8
+            |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |0.77% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:37 avg_cycles:0)
+            |          |          |          |0.63% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:52 avg_cycles:0)
+            |1.92% camlQuicksort__code_begin quicksort.ml:8
+            |          camlQuicksort__code_begin quicksort.ml:9
+            |          |1.10% camlQuicksort__code_begin quicksort.ml:8
+            |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:16 avg_cycles:0)
+            |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:28.3%)
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:69.8%)
+            |          |          |0.62% camlQuicksort__code_begin quicksort.ml:9 (iter:10 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:20 avg_cycles:0)
+            |          |0.62% camlQuicksort__code_begin quicksort.ml:8
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:30 avg_cycles:0)
+            |0.73% camlQuicksort__code_begin quicksort.ml:8
+            |          camlQuicksort__code_begin quicksort.ml:12
+            |          camlQuicksort__code_begin quicksort.ml:10 (predicted:22.9%)
+            |          camlQuicksort__code_begin quicksort.ml:10
+            |          camlQuicksort__code_begin quicksort.ml:9
+            |          camlQuicksort__code_begin quicksort.ml:10
+            |          camlQuicksort__code_begin quicksort.ml:9 (predicted:77.1%)
+
+    16.81%  quicksort.ml:32                                       [.] camlQuicksort__qsort2_130                   code                      
+            |14.27% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:52.4%)
+            |          |6.81% camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:65.4%)
+            |          |          |3.21% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:66 avg_cycles:0)
+            |          |          |          |3.19% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |2.12% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:28 avg_cycles:0)
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:30.4%)
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (iter:105 avg_cycles:0)
+            |          |          |          |          |          |2.00% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:79.2%)
+            |          |          |          |          |          |          |1.31% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:30 avg_cycles:0)
+            |          |          |          |          |          |          |          |1.16% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:80.4%)
+            |          |          |          |          |          |          |          |          |0.77% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:7 avg_cycles:0)
+            |          |          |          |          |          |          |          |          |          |0.66% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:84.4%)
+            |          |          |          |          |          |          |0.69% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:54 avg_cycles:0)
+            |          |          |          |          |          |          |          |0.50% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |0.98% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:47 avg_cycles:0)
+            |          |          |          |          |          |0.58% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:34 avg_cycles:0)
+            |          |          |3.13% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:150 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:78.7%)
+            |          |          |          |1.73% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:130 avg_cycles:0)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:79.5%)
+            |          |          |          |          |0.98% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:105 avg_cycles:0)
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:87.2%)
+            |          |          |          |          |          |0.69% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:76 avg_cycles:0)
+            |          |          |          |          |0.75% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:15 avg_cycles:0)
+            |          |          |          |          |          |0.69% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          |          |0.58% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:13 avg_cycles:0)
+            |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:3.6%)
+            |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |1.25% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:32 avg_cycles:0)
+            |          |          |          |          |1.17% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          |0.75% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:6 avg_cycles:0)
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:13.9%)
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          |          |0.73% camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (iter:30 avg_cycles:0)
+            |          |          |          |          |          |          |          |0.60% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:89.7%)
+            |          |6.63% camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |6.29% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |3.56% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:53 avg_cycles:0)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:40.9%)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:49.7%)
+            |          |          |          |          |2.23% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:114 avg_cycles:0)
+            |          |          |          |          |          |2.10% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:40 avg_cycles:0)
+            |          |          |          |          |          |          |1.63% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:36 avg_cycles:0)
+            |          |          |          |          |          |          |          |1.02% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:14 avg_cycles:0)
+            |          |          |          |          |          |          |          |          |0.52% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |1.33% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:124 avg_cycles:0)
+            |          |          |          |          |          |1.23% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:67.8%)
+            |          |          |          |          |          |          |0.75% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:64 avg_cycles:0)
+            |          |          |          |          |          |          |          |0.54% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:69.2%)
+            |          |          |          |2.48% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:119 avg_cycles:0)
+            |          |          |          |          |1.33% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:82 avg_cycles:0)
+            |          |          |          |          |          |0.67% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:78 avg_cycles:0)
+            |          |          |          |          |          |0.67% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:6 avg_cycles:0)
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:46.9%)
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          |          |0.62% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:36.7%)
+            |          |          |          |          |1.15% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:24 avg_cycles:0)
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:56.4%)
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:32.7%)
+            |          |          |          |          |          |0.85% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:36 avg_cycles:0)
+            |          |          |          |          |          |          |0.73% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |0.83% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |0.79% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:38 avg_cycles:0)
+            |          |          |          |0.66% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:60 avg_cycles:0)
+            |          |          |          |          |0.56% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:63 avg_cycles:0)
+            |1.81% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |0.89% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:13 avg_cycles:0)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:20.9%)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:67.4%)
+            |          |          |0.52% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:7 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:25 avg_cycles:0)
+            |          |0.79% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:38 avg_cycles:0)
+            |0.52% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          camlQuicksort__qsort2_130 quicksort.ml:34
+            |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:12.0%)
+            |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:80.0%)
+
+    14.81%  quicksort.ml:31                                       [.] camlQuicksort__qsort2_130                   code                      
+            |7.33% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |3.44% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:165 avg_cycles:0)
+            |          |          |2.23% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:168 avg_cycles:0)
+            |          |          |          |1.37% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:132 avg_cycles:0)
+            |          |          |          |          |1.00% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:120 avg_cycles:0)
+            |          |          |          |0.58% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:15 avg_cycles:0)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:67.9%)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:17.9%)
+            |          |          |          |          |0.54% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:7 avg_cycles:0)
+            |          |          |0.96% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:12 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:39.1%)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:41.3%)
+            |          |          |          |0.69% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:12 avg_cycles:0)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:6 avg_cycles:0)
+            |          |3.29% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:65 avg_cycles:0)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:35.4%)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:48.7%)
+            |          |          |2.35% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:41 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:130 avg_cycles:0)
+            |          |          |          |1.40% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:42 avg_cycles:0)
+            |          |          |          |          |0.90% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          |0.60% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |0.79% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:6 avg_cycles:0)
+            |          |          |          |          |0.71% camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:17.6%)
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          |0.60% camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          |          |0.56% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:12 avg_cycles:0)
+            |          |          |0.94% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:45 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:75.6%)
+            |2.50% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |2.35% camlQuicksort__qsort2_130 quicksort.ml:34
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:32.7%)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:53.1%)
+            |          |          |1.67% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:27 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |0.94% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:93 avg_cycles:0)
+            |          |          |          |          |0.52% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:62 avg_cycles:0)
+            |          |          |          |0.73% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:39 avg_cycles:0)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:25.7%)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (iter:30 avg_cycles:0)
+            |          |          |          |          |0.69% camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |          |0.62% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:79.3%)
+            |          |          |0.69% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:33 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:72.7%)
+            |2.25% camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:9.3%)
+            |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:72.2%)
+            |          |1.21% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:58 avg_cycles:0)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:79.3%)
+            |          |          |0.81% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:50 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:66.7%)
+            |          |1.04% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:20 avg_cycles:0)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |0.69% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:6 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:33.3%)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (iter:40 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:72.7%)
+            |1.23% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:83.1%)
+            |          |0.98% camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:31.9%)
+            |          |          |0.83% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:8 avg_cycles:0)
+            |          |          |          |0.81% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |0.90% camlQuicksort__qsort2_130 quicksort.ml:25
+            |          camlQuicksort__qsort2_130 quicksort.ml:38
+            |          camlQuicksort__qsort2_130 quicksort.ml:37
+            |          camlQuicksort__qsort2_130 quicksort.ml:30
+            |          camlQuicksort__qsort2_130 quicksort.ml:30 (predicted:88.4%)
+            |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:27.9%)
+            |          |0.79% camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:65.8%)
+
+    13.46%  quicksort.ml:9                                        [.] camlQuicksort__code_begin                   code                      
+            |6.62% camlQuicksort__code_begin quicksort.ml:8
+            |          camlQuicksort__code_begin quicksort.ml:9
+            |          |3.20% camlQuicksort__code_begin quicksort.ml:8
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:154 avg_cycles:0)
+            |          |          |2.18% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:176 avg_cycles:0)
+            |          |          |          |1.41% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:150 avg_cycles:0)
+            |          |          |          |          |1.04% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:132 avg_cycles:0)
+            |          |          |          |0.60% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:12 avg_cycles:0)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:69.0%)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:31.0%)
+            |          |          |0.79% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:20 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:50.0%)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:39.5%)
+            |          |          |          |0.60% camlQuicksort__code_begin quicksort.ml:9 (iter:9 avg_cycles:0)
+            |          |          |          |          |0.56% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:6 avg_cycles:0)
+            |          |3.08% camlQuicksort__code_begin quicksort.ml:8
+            |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:39 avg_cycles:0)
+            |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:40.5%)
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:54.1%)
+            |          |          |2.00% camlQuicksort__code_begin quicksort.ml:9 (iter:26 avg_cycles:0)
+            |          |          |          |1.98% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:50 avg_cycles:0)
+            |          |          |          |          |1.29% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:36 avg_cycles:0)
+            |          |          |          |          |          |0.83% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:35 avg_cycles:0)
+            |          |          |          |          |0.63% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:24 avg_cycles:0)
+            |          |          |          |          |          |0.52% camlQuicksort__code_begin quicksort.ml:10 (predicted:24.0%)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |1.08% camlQuicksort__code_begin quicksort.ml:10 (iter:52 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:73.1%)
+            |          |          |          |0.62% camlQuicksort__code_begin quicksort.ml:10 (iter:38 avg_cycles:0)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:83.3%)
+            |2.23% camlQuicksort__code_begin quicksort.ml:8
+            |          |2.19% camlQuicksort__code_begin quicksort.ml:12
+            |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:37.7%)
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:47.2%)
+            |          |          |1.61% camlQuicksort__code_begin quicksort.ml:9 (iter:23 avg_cycles:0)
+            |          |          |          |1.56% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |0.79% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:39 avg_cycles:0)
+            |          |          |          |          |          |0.75% camlQuicksort__code_begin quicksort.ml:10 (predicted:33.3%)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (iter:10 avg_cycles:0)
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          |          |0.73% camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |          |          |0.71% camlQuicksort__code_begin quicksort.ml:9 (predicted:78.8%)
+            |          |          |          |          |0.77% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:66 avg_cycles:0)
+            |          |          |          |          |          |0.52% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (iter:42 avg_cycles:0)
+            |          |          |0.58% camlQuicksort__code_begin quicksort.ml:10 (iter:28 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:92.9%)
+            |2.00% camlQuicksort__code_begin quicksort.ml:10 (predicted:22.9%)
+            |          camlQuicksort__code_begin quicksort.ml:10
+            |          camlQuicksort__code_begin quicksort.ml:9
+            |          camlQuicksort__code_begin quicksort.ml:10
+            |          camlQuicksort__code_begin quicksort.ml:9 (predicted:55.2%)
+            |          |1.33% camlQuicksort__code_begin quicksort.ml:9 (iter:17 avg_cycles:0)
+            |          |          |1.31% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |0.79% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:12 avg_cycles:0)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:36.8%)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (iter:35 avg_cycles:0)
+            |          |          |          |          |0.77% camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:73.0%)
+            |          |          |          |          |          |0.52% camlQuicksort__code_begin quicksort.ml:10 (iter:24 avg_cycles:0)
+            |          |0.67% camlQuicksort__code_begin quicksort.ml:10 (iter:32 avg_cycles:0)
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:78.1%)
+            |1.13% camlQuicksort__code_begin quicksort.ml:9 (predicted:81.8%)
+            |          |0.88% camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:30.2%)
+            |          |          |0.77% camlQuicksort__code_begin quicksort.ml:9 (iter:11 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |0.83% camlQuicksort__code_begin quicksort.ml:3
+            |          camlQuicksort__code_begin quicksort.ml:16
+            |          camlQuicksort__code_begin quicksort.ml:15
+            |          camlQuicksort__code_begin quicksort.ml:8
+            |          camlQuicksort__code_begin quicksort.ml:8 (predicted:80.0%)
+            |          camlQuicksort__code_begin quicksort.ml:10
+            |          camlQuicksort__code_begin quicksort.ml:10 (predicted:42.5%)
+            |          |0.73% camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:51.4%)
+
+     3.88%  quicksort.ml:34                                       [.] camlQuicksort__qsort2_130                   code                      
+            |3.02% camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:0.7%)
+            |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:60.7%)
+            |          |1.94% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:38 avg_cycles:0)
+            |          |          |1.92% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |1.31% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:34 (iter:20 avg_cycles:0)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:22.2%)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32 (iter:35 avg_cycles:0)
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          |          |          |1.27% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:80.3%)
+            |          |          |          |          |          |0.88% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:48 avg_cycles:0)
+            |          |          |          |          |          |          |0.71% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:76.5%)
+            |          |          |          |          |          |          |          |0.52% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:14 avg_cycles:0)
+            |          |          |          |0.58% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (iter:28 avg_cycles:0)
+            |          |1.08% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:52 avg_cycles:0)
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:75.0%)
+            |          |          |0.58% camlQuicksort__qsort2_130 quicksort.ml:31 (iter:30 avg_cycles:0)
+            |          |          |          |0.54% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          |0.50% camlQuicksort__qsort2_130 quicksort.ml:32 (iter:24 avg_cycles:0)
+            |          |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:70.8%)
+            |0.85% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:65.9%)
+            |          |0.56% camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:51.9%)
+
+     3.35%  quicksort.ml:12                                       [.] camlQuicksort__code_begin                   code                      
+            |2.50% camlQuicksort__code_begin quicksort.ml:10 (predicted:0.0%)
+            |          camlQuicksort__code_begin quicksort.ml:10
+            |          camlQuicksort__code_begin quicksort.ml:9
+            |          camlQuicksort__code_begin quicksort.ml:10
+            |          camlQuicksort__code_begin quicksort.ml:9 (predicted:74.2%)
+            |          |1.33% camlQuicksort__code_begin quicksort.ml:9 (iter:26 avg_cycles:0)
+            |          |          |1.31% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |1.10% camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:12 (iter:15 avg_cycles:0)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (predicted:34.0%)
+            |          |          |          |          camlQuicksort__code_begin quicksort.ml:10 (iter:55 avg_cycles:0)
+            |          |          |          |          |1.04% camlQuicksort__code_begin quicksort.ml:9
+            |          |          |          |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          |          |          |          |1.00% camlQuicksort__code_begin quicksort.ml:9 (predicted:72.9%)
+            |          |          |          |          |          |          |0.60% camlQuicksort__code_begin quicksort.ml:10 (iter:12 avg_cycles:0)
+            |          |          |          |          |          |          |          |0.52% camlQuicksort__code_begin quicksort.ml:9 (predicted:96.0%)
+            |          |1.17% camlQuicksort__code_begin quicksort.ml:10 (iter:56 avg_cycles:0)
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:78.6%)
+            |          |          |0.65% camlQuicksort__code_begin quicksort.ml:10 (iter:44 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:77.4%)
+            |          |          |0.52% camlQuicksort__code_begin quicksort.ml:9 (iter:20 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:8
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9
+            |0.79% camlQuicksort__code_begin quicksort.ml:9 (predicted:68.4%)
+            |          |0.54% camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:73.1%)
+
+     2.86%  quicksort.ml:8                                        [.] camlQuicksort__code_begin                   code                      
+            |1.42% camlQuicksort__code_begin quicksort.ml:10 (predicted:2.9%)
+            |          |1.27% camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9
+            |          |          camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:68.9%)
+            |          |          |0.65% camlQuicksort__code_begin quicksort.ml:10 (iter:31 avg_cycles:0)
+            |          |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:67.7%)
+            |0.83% camlQuicksort__code_begin quicksort.ml:9 (predicted:77.5%)
+            |          |0.58% camlQuicksort__code_begin quicksort.ml:10
+            |          |          camlQuicksort__code_begin quicksort.ml:9 (predicted:60.7%)
+
+     2.46%  quicksort.ml:30                                       [.] camlQuicksort__qsort2_130                   code                      
+            |1.12% camlQuicksort__qsort2_130 quicksort.ml:32 (predicted:0.0%)
+            |          |1.06% camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:68.6%)
+            |0.56% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:81.5%)
+
+     2.16%  quicksort.ml:23                                       [.] camlQuicksort__qsort2_130                   code                      
+            |1.10% camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:60.4%)
+            |          |0.64% camlQuicksort__qsort2_130 quicksort.ml:32
+            |          |          camlQuicksort__qsort2_130 quicksort.ml:31 (predicted:83.9%)
+            |0.58% camlQuicksort__qsort2_130 quicksort.ml:30
+            |          camlQuicksort__qsort2_130 quicksort.ml:31
+
+     2.04%  quicksort.ml:58                                       [.] camlQuicksort__test_sort_273                code                      
+            |
+            ---camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:98 avg_cycles:0)
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:196 avg_cycles:0)
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:294 avg_cycles:0)
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:392 avg_cycles:0)
+               |1.08% camlQuicksort__test_sort_273 quicksort.ml:58 (calltrace)
+               |          |0.56% camlQuicksort__entry quicksort.ml:77 (calltrace)
+               |          |          caml_program +4194360 (calltrace)
+               |          |          caml_start_program +4194377 (calltrace)
+               |          |          caml_startup_exn startup.c:144 (calltrace)
+               |          |          caml_startup startup.c:149 (calltrace)
+               |          |          main main.c:37 (calltrace)
+               |          |          __libc_start_main libc-start.c:291 (calltrace)
+               |          |          _start +4194344 (calltrace)
+               |          |0.52% camlQuicksort__entry quicksort.ml:78 (calltrace)
+               |          |          caml_program +4194360 (calltrace)
+               |          |          caml_start_program +4194377 (calltrace)
+               |          |          caml_startup_exn startup.c:144 (calltrace)
+               |          |          caml_startup startup.c:149 (calltrace)
+               |          |          main main.c:37 (calltrace)
+               |          |          __libc_start_main libc-start.c:291 (calltrace)
+               |          |          _start +4194344 (calltrace)
+
+     1.17%  quicksort.ml:3                                        [.] camlQuicksort__code_begin                   code                      
+     1.08%  quicksort.ml:65                                       [.] camlQuicksort__test_sort_273                code                      
+            |0.87% camlQuicksort__test_sort_273 quicksort.ml:65
+            |          camlQuicksort__test_sort_273 quicksort.ml:64
+            |          camlQuicksort__test_sort_273 quicksort.ml:64
+            |          camlQuicksort__test_sort_273 quicksort.ml:65
+            |          camlQuicksort__test_sort_273 quicksort.ml:65
+            |          camlQuicksort__test_sort_273 quicksort.ml:64 (iter:84 avg_cycles:0)
+            |          camlQuicksort__test_sort_273 quicksort.ml:64
+            |          camlQuicksort__test_sort_273 quicksort.ml:65 (iter:84 avg_cycles:0)
+            |          camlQuicksort__test_sort_273 quicksort.ml:65
+            |          camlQuicksort__test_sort_273 quicksort.ml:64 (iter:168 avg_cycles:0)
+
+     0.96%  memory.c:635                                          [.] caml_initialize                             code                      
+     0.73%  quicksort.ml:48                                       [.] camlQuicksort__test_sort_273                code                      
+            |
+            ---camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:35 avg_cycles:0)
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:70 avg_cycles:0)
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:105 avg_cycles:0)
+               camlQuicksort__test_sort_273 quicksort.ml:57
+               camlQuicksort__test_sort_273 quicksort.ml:58 (iter:140 avg_cycles:0)
+
+     0.71%  array.c:212                                           [.] caml_make_vect                              code                      
+            |0.60% caml_initialize memory.c:634
+            |          caml_make_vect array.c:212
+            |          caml_make_vect array.c:212
+            |          caml_make_vect array.c:212
+            |          caml_make_vect array.c:212
+            |          caml_initialize memory.c:638
+            |          caml_initialize memory.c:638
+            |          caml_initialize memory.c:635
+            |          caml_initialize memory.c:635
+            |          |0.58% caml_initialize memory.c:635
+            |          |          caml_initialize memory.c:634
+            |          |          caml_make_vect array.c:212 (iter:140 avg_cycles:0)
+
+     0.69%  quicksort.ml:25                                       [.] camlQuicksort__qsort2_130                   code                      
+     0.65%  quicksort.ml:37                                       [.] camlQuicksort__qsort2_130                   code                      
+     0.64%  quicksort.ml:64                                       [.] camlQuicksort__test_sort_273                code                      
+            |0.56% camlQuicksort__test_sort_273 quicksort.ml:64
+            |          camlQuicksort__test_sort_273 quicksort.ml:65
+            |          camlQuicksort__test_sort_273 quicksort.ml:65
+            |          camlQuicksort__test_sort_273 quicksort.ml:64
+            |          camlQuicksort__test_sort_273 quicksort.ml:64
+            |          camlQuicksort__test_sort_273 quicksort.ml:65 (iter:54 avg_cycles:0)
+            |          camlQuicksort__test_sort_273 quicksort.ml:65
+            |          camlQuicksort__test_sort_273 quicksort.ml:64 (iter:54 avg_cycles:0)
+            |          camlQuicksort__test_sort_273 quicksort.ml:64
+            |          camlQuicksort__test_sort_273 quicksort.ml:65 (iter:108 avg_cycles:0)
+
+     0.52%  quicksort.ml:15                                       [.] camlQuicksort__code_begin                   code                      
+     0.48%  copy_user_enhanced_fast_string+5                      [k] copy_user_enhanced_fast_string              [kernel.kallsyms]         
+     0.35%  memory.c:638                                          [.] caml_initialize                             code                      
+     0.23%  quicksort.ml:39                                       [.] camlQuicksort__qsort2_130                   code                      
+     0.21%  quicksort.ml:17                                       [.] camlQuicksort__code_begin                   code                      
+     0.21%  quicksort.ml:7                                        [.] camlQuicksort__code_begin                   code                      
+     0.19%  quicksort.ml:29                                       [.] camlQuicksort__qsort2_130                   code                      
+     0.19%  quicksort.ml:57                                       [.] camlQuicksort__test_sort_273                code                      
+     0.17%  quicksort.ml:38                                       [.] camlQuicksort__qsort2_130                   code                      
+     0.17%  memory.c:634                                          [.] caml_initialize                             code                      
+     0.16%  osl_readl+18446744073709551515                        [k] osl_readl                                   [wl]                      
+     0.16%  quicksort.ml:16                                       [.] camlQuicksort__code_begin                   code                      
+     0.15%  clear_page_c_e+7                                      [k] clear_page_c_e                              [kernel.kallsyms]         
+     0.14%  intel_idle+156                                        [k] intel_idle                                  [kernel.kallsyms]         
+     0.14%  osl_readw+18446744073709551516                        [k] osl_readw                                   [wl]                      
+     0.13%  update_blocked_averages+134                           [k] update_blocked_averages                     [kernel.kallsyms]         
+     0.12%  memory.c:168                                          [.] caml_page_table_modify                      code                      
+     0.09%  update_blocked_averages+1043                          [k] update_blocked_averages                     [kernel.kallsyms]         
+     0.09%  native_write_msr+6                                    [k] native_write_msr                            [kernel.kallsyms]         
+     0.08%  acpi_os_read_port+96                                  [k] acpi_os_read_port                           [kernel.kallsyms]         
+     0.08%  page_fault+0                                          [k] page_fault                                  [kernel.kallsyms]         
+     0.08%  i965_dri.so[3f4933]                                   [.] 0x00000000003f4933                          i965_dri.so               
+     0.07%  iov_iter_fault_in_readable+243                        [k] iov_iter_fault_in_readable                  [kernel.kallsyms]         
+     0.06%  __block_commit_write.isra.28+114                      [k] __block_commit_write.isra.28                [kernel.kallsyms]         
+     0.06%  _raw_spin_lock+16                                     [k] _raw_spin_lock                              [kernel.kallsyms]         
+     0.05%  update_load_avg+34                                    [k] update_load_avg                             [kernel.kallsyms]         
+     0.05%  i965_dri.so[3e89ff]                                   [.] 0x00000000003e89ff                          i965_dri.so               
+     0.05%  delay_tsc+37                                          [k] delay_tsc                                   [kernel.kallsyms]         
+     0.05%  malloc.c:2924                                         [.] malloc                                      libc-2.23.so              
+     0.04%  update_load_avg+81                                    [k] update_load_avg                             [kernel.kallsyms]         
+     0.04%  [wl][74360]                                           [k] 0x00000000000743d0                          [wl]                      
+     0.04%  compact.c:67                                          [.] invert_pointer_at                           code                      
+     0.04%  free_pcppages_bulk+781                                [k] free_pcppages_bulk                          [kernel.kallsyms]         
+     0.04%  quicksort.ml:68                                       [.] camlQuicksort__test_sort_273                code                      
+     0.04%  unmap_page_range+1422                                 [k] unmap_page_range                            [kernel.kallsyms]         
+     0.04%  __rmqueue+119                                         [k] __rmqueue                                   [kernel.kallsyms]         
+     0.04%  pthread_mutex_unlock+46                               [.] pthread_mutex_unlock                        libpthread-2.23.so        
+     0.04%  ext4_do_update_inode+1408                             [k] ext4_do_update_inode                        [kernel.kallsyms]         
+     0.04%  [wl][74371]                                           [k] 0x00000000000743e1                          [wl]                      
+     0.04%  malloc.c:2911                                         [.] malloc                                      libc-2.23.so              
+     0.04%  timerqueue_add+29                                     [k] timerqueue_add                              [kernel.kallsyms]         
+     0.03%  reservation_object_reserve_shared+27                  [k] reservation_object_reserve_shared           [kernel.kallsyms]         
+     0.03%  __schedule+66                                         [k] __schedule                                  [kernel.kallsyms]         
+     0.03%  spotify[ee246c]                                       [.] 0x0000000000ae246c                          spotify                   
+     0.03%  pagevec_lru_move_fn+64                                [k] pagevec_lru_move_fn                         [kernel.kallsyms]         
+     0.03%  hrtimer_active+50                                     [k] hrtimer_active                              [kernel.kallsyms]         
+     0.03%  malloc.c:2934                                         [.] free                                        libc-2.23.so              
+     0.03%  get_page_from_freelist+2135                           [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.03%  spotify[ee7325]                                       [.] 0x0000000000ae7325                          spotify                   
+     0.03%  advance_transaction+92                                [k] advance_transaction                         [kernel.kallsyms]         
+     0.03%  update_blocked_averages+150                           [k] update_blocked_averages                     [kernel.kallsyms]         
+     0.03%  _raw_spin_lock_irqsave+38                             [k] _raw_spin_lock_irqsave                      [kernel.kallsyms]         
+     0.03%  __fget_light+23                                       [k] __fget_light                                [kernel.kallsyms]         
+     0.03%  update_blocked_averages+171                           [k] update_blocked_averages                     [kernel.kallsyms]         
+     0.03%  menu_select+635                                       [k] menu_select                                 [kernel.kallsyms]         
+     0.03%  spotify[ef0502]                                       [.] 0x0000000000af0502                          spotify                   
+     0.03%  _cond_resched+0                                       [k] _cond_resched                               [kernel.kallsyms]         
+     0.03%  _raw_read_lock+14                                     [k] _raw_read_lock                              [kernel.kallsyms]         
+     0.02%  update_blocked_averages+1034                          [k] update_blocked_averages                     [kernel.kallsyms]         
+     0.02%  perf[41a3ff]                                          [.] 0x000000000001a3ff                          perf                      
+     0.02%  libcef.so[3973ae6]                                    [.] 0x0000000003973ae6                          libcef.so                 
+     0.02%  ??:0                                                  [.] 0x00007fc014654867                          [unknown]                 
+     0.02%  intel_idle+165                                        [k] intel_idle                                  [kernel.kallsyms]         
+     0.02%  unlock_page+23                                        [k] unlock_page                                 [kernel.kallsyms]         
+     0.02%  switch_mm_irqs_off+63                                 [k] switch_mm_irqs_off                          [kernel.kallsyms]         
+     0.02%  major_gc.c:408                                        [.] mark_slice                                  code                      
+     0.02%  __pagevec_lru_add_fn+158                              [k] __pagevec_lru_add_fn                        [kernel.kallsyms]         
+     0.02%  memory.c:173                                          [.] caml_page_table_modify                      code                      
+     0.02%  get_page_from_freelist+522                            [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.02%  get_page_from_freelist+2154                           [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.02%  __alloc_pages_nodemask+36                             [k] __alloc_pages_nodemask                      [kernel.kallsyms]         
+     0.02%  snd_ctl_find_id+18446744073709551547                  [k] snd_ctl_find_id                             [snd]                     
+     0.02%  memory.c:157                                          [.] caml_page_table_modify                      code                      
+     0.02%  __rmqueue+11                                          [k] __rmqueue                                   [kernel.kallsyms]         
+     0.02%  handle_mm_fault+3587                                  [k] handle_mm_fault                             [kernel.kallsyms]         
+     0.02%  mem_cgroup_update_lru_size+16                         [k] mem_cgroup_update_lru_size                  [kernel.kallsyms]         
+     0.02%  pci_azx_readl+18446744073709551515                    [k] pci_azx_readl                               [snd_hda_intel]           
+     0.02%  compact.c:118                                         [.] invert_pointer_at                           code                      
+     0.02%  unmap_page_range+1926                                 [k] unmap_page_range                            [kernel.kallsyms]         
+     0.02%  unmap_page_range+1580                                 [k] unmap_page_range                            [kernel.kallsyms]         
+     0.02%  pervasives.ml:467                                     [.] camlQuicksort__test_sort_273                code                      
+     0.02%  __radix_tree_lookup+70                                [k] __radix_tree_lookup                         [kernel.kallsyms]         
+     0.02%  major_gc.c:251                                        [.] mark_slice                                  code                      
+     0.02%  compact.c:271                                         [.] do_compaction                               code                      
+     0.02%  memcpy-avx-unaligned.S:238                            [.] __memmove_avx_unaligned                     libc-2.23.so              
+     0.02%  delay_tsc+57                                          [k] delay_tsc                                   [kernel.kallsyms]         
+     0.02%  setjmp.S:26                                           [.] __sigsetjmp                                 libc-2.23.so              
+     0.02%  libharfbuzz.so.0.10000.1[2b43b]                       [.] 0x000000000002b43b                          libharfbuzz.so.0.10000.1  
+     0.02%  mark_buffer_dirty+15                                  [k] mark_buffer_dirty                           [kernel.kallsyms]         
+     0.02%  cairo_curve_to+0                                      [.] cairo_curve_to                              libcairo.so.2.11400.6     
+     0.02%  g_main_context_check+520                              [.] g_main_context_check                        libglib-2.0.so.0.4800.2   
+     0.02%  librsvg-2.so.2.40.13[de22]                            [.] 0x000000000000de22                          librsvg-2.so.2.40.13      
+     0.02%  malloc.c:3896                                         [.] _int_free                                   libc-2.23.so              
+     0.02%  _raw_write_lock+16                                    [k] _raw_write_lock                             [kernel.kallsyms]         
+     0.02%  acpi_os_write_port+48                                 [k] acpi_os_write_port                          [kernel.kallsyms]         
+     0.02%  g_type_free_instance+223                              [.] g_type_free_instance                        libgobject-2.0.so.0.4800.2
+     0.02%  libcairo.so.2.11400.6[57150]                          [.] 0x0000000000057150                          libcairo.so.2.11400.6     
+     0.02%  unix_write_space+0                                    [k] unix_write_space                            [kernel.kallsyms]         
+     0.02%  malloc.c:4181                                         [.] malloc_consolidate                          libc-2.23.so              
+     0.02%  memset_erms+11                                        [k] memset_erms                                 [kernel.kallsyms]         
+     0.02%  i965_dri.so[65820]                                    [.] 0x0000000000065820                          i965_dri.so               
+     0.02%  get_futex_key+20                                      [k] get_futex_key                               [kernel.kallsyms]         
+     0.02%  libcef.so[6e5b9df]                                    [.] 0x0000000006e5b9df                          libcef.so                 
+     0.02%  drm_intel_bo_reference+4                              [.] drm_intel_bo_reference                      libdrm_intel.so.1.0.0     
+     0.02%  sock_wfree+26                                         [k] sock_wfree                                  [kernel.kallsyms]         
+     0.02%  g_signal_connect_data+1991                            [.] g_signal_connect_data                       libgobject-2.0.so.0.4800.2
+     0.02%  i915_gem_request_await_object+18446744073709551564    [k] i915_gem_request_await_object               [i915]                    
+     0.02%  tick_nohz_idle_exit+37                                [k] tick_nohz_idle_exit                         [kernel.kallsyms]         
+     0.02%  account_entity_dequeue+11                             [k] account_entity_dequeue                      [kernel.kallsyms]         
+     0.02%  libcef.so[3f616d0]                                    [.] 0x0000000003f616d0                          libcef.so                 
+     0.02%  libcef.so[39978ad]                                    [.] 0x00000000039978ad                          libcef.so                 
+     0.02%  reservation_object_get_fences_rcu+47                  [k] reservation_object_get_fences_rcu           [kernel.kallsyms]         
+     0.02%  libcef.so[27a85a0]                                    [.] 0x00000000027a85a0                          libcef.so                 
+     0.02%  i915_gem_obj_prepare_shmem_read+18446744073709551560  [k] i915_gem_obj_prepare_shmem_read             [i915]                    
+     0.02%  i965_dri.so[171b14]                                   [.] 0x0000000000171b14                          i965_dri.so               
+     0.02%  libcef.so[38f2857]                                    [.] 0x00000000038f2857                          libcef.so                 
+     0.02%  libcef.so[252aa50]                                    [.] 0x000000000252aa50                          libcef.so                 
+     0.02%  libcef.so[6651eeb]                                    [.] 0x0000000006651eeb                          libcef.so                 
+     0.02%  libcef.so[3ef4986]                                    [.] 0x0000000003ef4986                          libcef.so                 
+     0.02%  i965_dri.so[4007e4]                                   [.] 0x00000000004007e4                          i965_dri.so               
+     0.02%  libcairo.so.2.11400.6[4aa8a]                          [.] 0x000000000004aa8a                          libcairo.so.2.11400.6     
+     0.02%  _find_next_bit.part.0+89                              [k] _find_next_bit.part.0                       [kernel.kallsyms]         
+     0.02%  libcef.so[3ef0843]                                    [.] 0x0000000003ef0843                          libcef.so                 
+     0.02%  intel_engine_cmd_parser+1980                          [k] intel_engine_cmd_parser                     [i915]                    
+     0.02%  libcef.so[38296e1]                                    [.] 0x00000000038296e1                          libcef.so                 
+     0.02%  __schedule+485                                        [k] __schedule                                  [kernel.kallsyms]         
+     0.02%  libcef.so[24e6a60]                                    [.] 0x00000000024e6a60                          libcef.so                 
+     0.02%  libcef.so[240b6af]                                    [.] 0x000000000240b6af                          libcef.so                 
+     0.02%  libcef.so[386adee]                                    [.] 0x000000000386adee                          libcef.so                 
+     0.02%  __mark_inode_dirty+84                                 [k] __mark_inode_dirty                          [kernel.kallsyms]         
+     0.02%  intel_engine_cmd_parser+1940                          [k] intel_engine_cmd_parser                     [i915]                    
+     0.02%  __i915_sw_fence_init+18446744073709551520             [k] __i915_sw_fence_init                        [i915]                    
+     0.02%  i965_dri.so[3caacb]                                   [.] 0x00000000003caacb                          i965_dri.so               
+     0.02%  drm_intel_bo_unmap+4                                  [.] drm_intel_bo_unmap                          libdrm_intel.so.1.0.0     
+     0.02%  libcef.so[676e63b]                                    [.] 0x000000000676e63b                          libcef.so                 
+     0.02%  entry_SYSCALL_64+0                                    [k] entry_SYSCALL_64                            [kernel.kallsyms]         
+     0.02%  libcef.so[38296d0]                                    [.] 0x00000000038296d0                          libcef.so                 
+     0.02%  libcef.so[66500a0]                                    [.] 0x00000000066500a0                          libcef.so                 
+     0.02%  do_sys_poll+0                                         [k] do_sys_poll                                 [kernel.kallsyms]         
+     0.02%  libpixman-1.so.0.33.6[5df30]                          [.] 0x000000000005df30                          libpixman-1.so.0.33.6     
+     0.02%  i965_dri.so[65c12]                                    [.] 0x0000000000065c12                          i965_dri.so               
+     0.02%  libcef.so[37f9ed7]                                    [.] 0x00000000037f9ed7                          libcef.so                 
+     0.02%  __gen6_gt_wait_for_fifo+18446744073709551611          [k] __gen6_gt_wait_for_fifo                     [i915]                    
+     0.02%  libcef.so[3f01fcf]                                    [.] 0x0000000003f01fcf                          libcef.so                 
+     0.02%  libcef.so[6781679]                                    [.] 0x0000000006781679                          libcef.so                 
+     0.02%  current_time+43                                       [k] current_time                                [kernel.kallsyms]         
+     0.02%  libcef.so[386dc41]                                    [.] 0x000000000386dc41                          libcef.so                 
+     0.02%  spotify[ed4dc9]                                       [.] 0x0000000000ad4dc9                          spotify                   
+     0.02%  effective_load.isra.48+49                             [k] effective_load.isra.48                      [kernel.kallsyms]         
+     0.02%  libcef.so[676e108]                                    [.] 0x000000000676e108                          libcef.so                 
+     0.02%  mutex_unlock+24                                       [k] mutex_unlock                                [kernel.kallsyms]         
+     0.02%  i965_dri.so[10f986]                                   [.] 0x000000000010f986                          i965_dri.so               
+     0.02%  libcef.so[4257632]                                    [.] 0x0000000004257632                          libcef.so                 
+     0.02%  libcef.so[38fc187]                                    [.] 0x00000000038fc187                          libcef.so                 
+     0.02%  libcef.so[5efe5d0]                                    [.] 0x0000000005efe5d0                          libcef.so                 
+     0.02%  libcef.so[334dd4c]                                    [.] 0x000000000334dd4c                          libcef.so                 
+     0.02%  libGL.so.1.2.0[4a4a5]                                 [.] 0x000000000004a4a5                          libGL.so.1.2.0            
+     0.02%  libcef.so[3f50b7f]                                    [.] 0x0000000003f50b7f                          libcef.so                 
+     0.02%  xmlRMutexLock+0                                       [.] xmlRMutexLock                               libxml2.so.2.9.3          
+     0.02%  i965_dri.so[2c6867]                                   [.] 0x00000000002c6867                          i965_dri.so               
+     0.02%  i965_dri.so[3dbd5d]                                   [.] 0x00000000003dbd5d                          i965_dri.so               
+     0.02%  __fget+60                                             [k] __fget                                      [kernel.kallsyms]         
+     0.02%  fsnotify+1038                                         [k] fsnotify                                    [kernel.kallsyms]         
+     0.02%  __remove_hrtimer+0                                    [k] __remove_hrtimer                            [kernel.kallsyms]         
+     0.02%  drm_ioctl+609                                         [k] drm_ioctl                                   [drm]                     
+     0.02%  libcef.so[2529390]                                    [.] 0x0000000002529390                          libcef.so                 
+     0.02%  ??:0                                                  [.] 0x0000563650f3e3c3                          [unknown]                 
+     0.02%  __GI___libc_recvmsg+45                                [.] __GI___libc_recvmsg                         libpthread-2.23.so        
+     0.02%  ??:0                                                  [.] 0x00007f1a7d89c1c0                          [unknown]                 
+     0.02%  libcef.so[44f5820]                                    [.] 0x00000000044f5820                          libcef.so                 
+     0.02%  libcef.so[37de033]                                    [.] 0x00000000037de033                          libcef.so                 
+     0.02%  i965_dri.so[3f496d]                                   [.] 0x00000000003f496d                          i965_dri.so               
+     0.02%  xcb_send_request+0                                    [.] xcb_send_request                            libxcb.so.1.1.0           
+     0.02%  i965_dri.so[3f4949]                                   [.] 0x00000000003f4949                          i965_dri.so               
+     0.02%  get_target_pstate_use_cpu_load+61                     [k] get_target_pstate_use_cpu_load              [kernel.kallsyms]         
+     0.02%  libcef.so[5f4073e]                                    [.] 0x0000000005f4073e                          libcef.so                 
+     0.02%  libcef.so[41b23ee]                                    [.] 0x00000000041b23ee                          libcef.so                 
+     0.02%  ext4_group_desc_csum_set+0                            [k] ext4_group_desc_csum_set                    [kernel.kallsyms]         
+     0.02%  kmem_cache_free+90                                    [k] kmem_cache_free                             [kernel.kallsyms]         
+     0.02%  libcef.so[2526710]                                    [.] 0x0000000002526710                          libcef.so                 
+     0.02%  libdrm_intel.so.1.0.0[6970]                           [.] 0x0000000000006970                          libdrm_intel.so.1.0.0     
+     0.02%  __ext4_journal_stop+45                                [k] __ext4_journal_stop                         [kernel.kallsyms]         
+     0.02%  malloc.c:4161                                         [.] malloc_consolidate                          libc-2.23.so              
+     0.02%  native_queued_spin_lock_slowpath+199                  [k] native_queued_spin_lock_slowpath            [kernel.kallsyms]         
+     0.02%  try_to_wake_up+158                                    [k] try_to_wake_up                              [kernel.kallsyms]         
+     0.02%  ??:0                                                  [.] 0x0000563650f39eb0                          [unknown]                 
+     0.02%  libcef.so[330cba6]                                    [.] 0x000000000330cba6                          libcef.so                 
+     0.02%  s_ceil.S:36                                           [.] __ceil_sse41                                libm-2.23.so              
+     0.02%  libcef.so[31a6810]                                    [.] 0x00000000031a6810                          libcef.so                 
+     0.02%  perf-963.map[1152584f45fe]                            [.] 0x00001152584f45fe                          perf-963.map              
+     0.02%  i915_gem_object_ggtt_pin+18446744073709551504         [k] i915_gem_object_ggtt_pin                    [i915]                    
+     0.02%  libcef.so[2cf4040]                                    [.] 0x0000000002cf4040                          libcef.so                 
+     0.02%  XPending+1                                            [.] XPending                                    libX11.so.6.3.0           
+     0.02%  kmem_cache_alloc_node+80                              [k] kmem_cache_alloc_node                       [kernel.kallsyms]         
+     0.02%  ??:0                                                  [.] 0x00007f1a79a32170                          [unknown]                 
+     0.02%  advance_transaction+522                               [k] advance_transaction                         [kernel.kallsyms]         
+     0.02%  libpulsecommon-8.0.so[29740]                          [.] 0x0000000000029740                          libpulsecommon-8.0.so     
+     0.02%  __d_lookup_rcu+33                                     [k] __d_lookup_rcu                              [kernel.kallsyms]         
+     0.02%  ext4_da_write_begin+0                                 [k] ext4_da_write_begin                         [kernel.kallsyms]         
+     0.02%  libGL.so.1.2.0[49d05]                                 [.] 0x0000000000049d05                          libGL.so.1.2.0            
+     0.02%  i915_vma_move_to_active+18446744073709551560          [k] i915_vma_move_to_active                     [i915]                    
+     0.02%  libcef.so[3f0d6e7]                                    [.] 0x0000000003f0d6e7                          libcef.so                 
+     0.02%  malloc.c:3416                                         [.] _int_malloc                                 libc-2.23.so              
+     0.02%  i965_dri.so[3b150a]                                   [.] 0x00000000003b150a                          i965_dri.so               
+     0.02%  [wl][74396]                                           [k] 0x0000000000074406                          [wl]                      
+     0.02%  libcef.so[65ec97e]                                    [.] 0x00000000065ec97e                          libcef.so                 
+     0.02%  update_cfs_shares+42                                  [k] update_cfs_shares                           [kernel.kallsyms]         
+     0.02%  get_page_from_freelist+0                              [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.02%  libcef.so[3aadc80]                                    [.] 0x0000000003aadc80                          libcef.so                 
+     0.02%  ext4_journal_check_start+9                            [k] ext4_journal_check_start                    [kernel.kallsyms]         
+     0.02%  libcef.so[3e8433f]                                    [.] 0x0000000003e8433f                          libcef.so                 
+     0.02%  libcef.so[662e9a9]                                    [.] 0x000000000662e9a9                          libcef.so                 
+     0.02%  libcef.so[664873a]                                    [.] 0x000000000664873a                          libcef.so                 
+     0.02%  libcef.so[38b10c8]                                    [.] 0x00000000038b10c8                          libcef.so                 
+     0.02%  ??:0                                                  [.] 0x0000563651016a70                          [unknown]                 
+     0.02%  __switch_to+587                                       [k] __switch_to                                 [kernel.kallsyms]         
+     0.02%  libcef.so[37db5e3]                                    [.] 0x00000000037db5e3                          libcef.so                 
+     0.02%  vfs_fsync_range+54                                    [k] vfs_fsync_range                             [kernel.kallsyms]         
+     0.02%  i965_dri.so[3c2339]                                   [.] 0x00000000003c2339                          i965_dri.so               
+     0.02%  libcef.so[3825e90]                                    [.] 0x0000000003825e90                          libcef.so                 
+     0.02%  libcef.so[60f6855]                                    [.] 0x00000000060f6855                          libcef.so                 
+     0.02%  libcef.so[2f696b4]                                    [.] 0x0000000002f696b4                          libcef.so                 
+     0.02%  i915_gem_do_execbuffer.isra.38+259                    [k] i915_gem_do_execbuffer.isra.38              [i915]                    
+     0.02%  create_empty_buffers+212                              [k] create_empty_buffers                        [kernel.kallsyms]         
+     0.02%  libcef.so[3ef49d3]                                    [.] 0x0000000003ef49d3                          libcef.so                 
+     0.02%  __radix_tree_create+1                                 [k] __radix_tree_create                         [kernel.kallsyms]         
+     0.02%  perf-963.map[1152584f558a]                            [.] 0x00001152584f558a                          perf-963.map              
+     0.02%  libcef.so[3a33e33]                                    [.] 0x0000000003a33e33                          libcef.so                 
+     0.02%  i965_dri.so[3cab90]                                   [.] 0x00000000003cab90                          i965_dri.so               
+     0.02%  unix_stream_read_generic+1579                         [k] unix_stream_read_generic                    [kernel.kallsyms]         
+     0.02%  i965_dri.so[169122]                                   [.] 0x0000000000169122                          i965_dri.so               
+     0.02%  ktime_get_ts64+15                                     [k] ktime_get_ts64                              [kernel.kallsyms]         
+     0.02%  libcef.so[2531f41]                                    [.] 0x0000000002531f41                          libcef.so                 
+     0.02%  malloc.c:3379                                         [.] _int_malloc                                 libc-2.23.so              
+     0.02%  libcef.so[6035c00]                                    [.] 0x0000000006035c00                          libcef.so                 
+     0.02%  libgtk-3.so.0.1800.9[155192]                          [.] 0x0000000000155192                          libgtk-3.so.0.1800.9      
+     0.02%  gtk_style_context_set_state+2                         [.] gtk_style_context_set_state                 libgtk-3.so.0.1800.9      
+     0.02%  __popcountdi2+0                                       [.] __popcountdi2                               libgcc_s.so.1             
+     0.02%  libcef.so[65eca97]                                    [.] 0x00000000065eca97                          libcef.so                 
+     0.02%  libcef.so[6764391]                                    [.] 0x0000000006764391                          libcef.so                 
+     0.02%  copy_user_enhanced_fast_string+7                      [k] copy_user_enhanced_fast_string              [kernel.kallsyms]         
+     0.02%  chrome[2eab5a5]                                       [.] 0x0000000002eab5a5                          chrome                    
+     0.02%  i965_dri.so[3c2332]                                   [.] 0x00000000003c2332                          i965_dri.so               
+     0.02%  ??:0                                                  [.] 0x00007ff3422e8e3d                          [unknown]                 
+     0.02%  libcef.so[634a43a]                                    [.] 0x000000000634a43a                          libcef.so                 
+     0.02%  ext4_do_update_inode+89                               [k] ext4_do_update_inode                        [kernel.kallsyms]         
+     0.02%  libcef.so[677844b]                                    [.] 0x000000000677844b                          libcef.so                 
+     0.02%  libcef.so[3ef5d6f]                                    [.] 0x0000000003ef5d6f                          libcef.so                 
+     0.02%  schedule_hrtimeout_range_clock+197                    [k] schedule_hrtimeout_range_clock              [kernel.kallsyms]         
+     0.02%  libcef.so[40676fa]                                    [.] 0x00000000040676fa                          libcef.so                 
+     0.02%  libcef.so[3eb0acb]                                    [.] 0x0000000003eb0acb                          libcef.so                 
+     0.02%  ext4_da_get_block_prep+99                             [k] ext4_da_get_block_prep                      [kernel.kallsyms]         
+     0.02%  libcef.so[37de04b]                                    [.] 0x00000000037de04b                          libcef.so                 
+     0.02%  spotify[ef0a57]                                       [.] 0x0000000000af0a57                          spotify                   
+     0.02%  libcef.so[64279a0]                                    [.] 0x00000000064279a0                          libcef.so                 
+     0.02%  libcef.so[37f985c]                                    [.] 0x00000000037f985c                          libcef.so                 
+     0.02%  libcef.so[676a5e7]                                    [.] 0x000000000676a5e7                          libcef.so                 
+     0.02%  kvfree+0                                              [k] kvfree                                      [kernel.kallsyms]         
+     0.02%  libcef.so[6761fbc]                                    [.] 0x0000000006761fbc                          libcef.so                 
+     0.02%  _raw_spin_lock_irqsave+0                              [k] _raw_spin_lock_irqsave                      [kernel.kallsyms]         
+     0.02%  i965_dri.so[141eea]                                   [.] 0x0000000000141eea                          i965_dri.so               
+     0.02%  add_to_page_cache_lru+45                              [k] add_to_page_cache_lru                       [kernel.kallsyms]         
+     0.02%  ??:0                                                  [.] 0x00007fc01465acc0                          [unknown]                 
+     0.02%  libcef.so[65e6316]                                    [.] 0x00000000065e6316                          libcef.so                 
+     0.02%  libcef.so[6280c50]                                    [.] 0x0000000006280c50                          libcef.so                 
+     0.02%  i965_dri.so[3d3f6c]                                   [.] 0x00000000003d3f6c                          i965_dri.so               
+     0.02%  libGL.so.1.2.0[4f4b0]                                 [.] 0x000000000004f4b0                          libGL.so.1.2.0            
+     0.02%  hrtimer_start_range_ns+136                            [k] hrtimer_start_range_ns                      [kernel.kallsyms]         
+     0.02%  libcef.so[3892657]                                    [.] 0x0000000003892657                          libcef.so                 
+     0.02%  libcef.so[662e960]                                    [.] 0x000000000662e960                          libcef.so                 
+     0.02%  update_blocked_averages+393                           [k] update_blocked_averages                     [kernel.kallsyms]         
+     0.02%  do_sys_poll+758                                       [k] do_sys_poll                                 [kernel.kallsyms]         
+     0.02%  libcef.so[5efc3db]                                    [.] 0x0000000005efc3db                          libcef.so                 
+     0.02%  libcef.so[27542bc]                                    [.] 0x00000000027542bc                          libcef.so                 
+     0.02%  update_cfs_rq_load_avg.constprop.90+367               [k] update_cfs_rq_load_avg.constprop.90         [kernel.kallsyms]         
+     0.02%  libcef.so[252e130]                                    [.] 0x000000000252e130                          libcef.so                 
+     0.02%  libcef.so[380dea0]                                    [.] 0x000000000380dea0                          libcef.so                 
+     0.02%  memcmp-sse4.S:516                                     [.] __memcmp_sse4_1                             libc-2.23.so              
+     0.02%  delay_tsc+64                                          [k] delay_tsc                                   [kernel.kallsyms]         
+     0.02%  cairo_new_path+0                                      [.] cairo_new_path                              libcairo.so.2.11400.6     
+     0.02%  i915_gem_object_get_page+18446744073709551544         [k] i915_gem_object_get_page                    [i915]                    
+     0.02%  libcef.so[3a91da0]                                    [.] 0x0000000003a91da0                          libcef.so                 
+     0.02%  libcef.so[4b9880f]                                    [.] 0x0000000004b9880f                          libcef.so                 
+     0.02%  __page_cache_alloc+37                                 [k] __page_cache_alloc                          [kernel.kallsyms]         
+     0.02%  ??:0                                                  [.] 0x00007fc013b9f4da                          [unknown]                 
+     0.02%  ext4_es_can_be_merged+21                              [k] ext4_es_can_be_merged                       [kernel.kallsyms]         
+     0.01%  libcef.so[37f8170]                                    [.] 0x00000000037f8170                          libcef.so                 
+     0.01%  spotify[ed5205]                                       [.] 0x0000000000ad5205                          spotify                   
+     0.01%  malloc.c:3947                                         [.] _int_free                                   libc-2.23.so              
+     0.01%  libgtk-3.so.0.1800.9[93090]                           [.] 0x0000000000093090                          libgtk-3.so.0.1800.9      
+     0.01%  libcef.so[4bfdf3f]                                    [.] 0x0000000004bfdf3f                          libcef.so                 
+     0.01%  ext4_es_lookup_extent+344                             [k] ext4_es_lookup_extent                       [kernel.kallsyms]         
+     0.01%  _raw_spin_lock_irqsave+21                             [k] _raw_spin_lock_irqsave                      [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007fc015b1df01                          [unknown]                 
+     0.01%  libcef.so[37f82b2]                                    [.] 0x00000000037f82b2                          libcef.so                 
+     0.01%  cpu_load_update_nohz_start+55                         [k] cpu_load_update_nohz_start                  [kernel.kallsyms]         
+     0.01%  jbd2_journal_stop+111                                 [k] jbd2_journal_stop                           [kernel.kallsyms]         
+     0.01%  dequeue_task_fair+1737                                [k] dequeue_task_fair                           [kernel.kallsyms]         
+     0.01%  libcef.so[39721f4]                                    [.] 0x00000000039721f4                          libcef.so                 
+     0.01%  libcef.so[333a764]                                    [.] 0x000000000333a764                          libcef.so                 
+     0.01%  libcef.so[383fce5]                                    [.] 0x000000000383fce5                          libcef.so                 
+     0.01%  __switch_to+508                                       [k] __switch_to                                 [kernel.kallsyms]         
+     0.01%  spotify[ee6cbd]                                       [.] 0x0000000000ae6cbd                          spotify                   
+     0.01%  ext4_da_write_begin+251                               [k] ext4_da_write_begin                         [kernel.kallsyms]         
+     0.01%  libcef.so[39736be]                                    [.] 0x00000000039736be                          libcef.so                 
+     0.01%  rt_mutex_futex_unlock+35                              [k] rt_mutex_futex_unlock                       [kernel.kallsyms]         
+     0.01%  node_dirty_ok+260                                     [k] node_dirty_ok                               [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x0000563650fceff0                          [unknown]                 
+     0.01%  i965_dri.so[3c3498]                                   [.] 0x00000000003c3498                          i965_dri.so               
+     0.01%  libcef.so[37ddad0]                                    [.] 0x00000000037ddad0                          libcef.so                 
+     0.01%  libcef.so[25440d0]                                    [.] 0x00000000025440d0                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x0000563650f52c00                          [unknown]                 
+     0.01%  spotify[ee2454]                                       [.] 0x0000000000ae2454                          spotify                   
+     0.01%  __irqentry_text_start+0                               [k] __irqentry_text_start                       [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007fc01465446c                          [unknown]                 
+     0.01%  ??:0                                                  [.] 0x00007fc01468be4e                          [unknown]                 
+     0.01%  nr_iowait_cpu+24                                      [k] nr_iowait_cpu                               [kernel.kallsyms]         
+     0.01%  libpulsecommon-8.0.so[40034]                          [.] 0x0000000000040034                          libpulsecommon-8.0.so     
+     0.01%  i965_dri.so[16923b]                                   [.] 0x000000000016923b                          i965_dri.so               
+     0.01%  libcef.so[65a2081]                                    [.] 0x00000000065a2081                          libcef.so                 
+     0.01%  libcef.so[65ec9e0]                                    [.] 0x00000000065ec9e0                          libcef.so                 
+     0.01%  profile_tick+0                                        [k] profile_tick                                [kernel.kallsyms]         
+     0.01%  libcef.so[386b0f0]                                    [.] 0x000000000386b0f0                          libcef.so                 
+     0.01%  libcef.so[27abfcf]                                    [.] 0x00000000027abfcf                          libcef.so                 
+     0.01%  perf-963.map[1152584f4eca]                            [.] 0x00001152584f4eca                          perf-963.map              
+     0.01%  libcef.so[386ed40]                                    [.] 0x000000000386ed40                          libcef.so                 
+     0.01%  libcef.so[6723740]                                    [.] 0x0000000006723740                          libcef.so                 
+     0.01%  libcef.so[6643530]                                    [.] 0x0000000006643530                          libcef.so                 
+     0.01%  libcef.so[65e7a12]                                    [.] 0x00000000065e7a12                          libcef.so                 
+     0.01%  start_this_handle+293                                 [k] start_this_handle                           [kernel.kallsyms]         
+     0.01%  __fget+50                                             [k] __fget                                      [kernel.kallsyms]         
+     0.01%  __fget_light+0                                        [k] __fget_light                                [kernel.kallsyms]         
+     0.01%  clm_limits+1834                                       [k] clm_limits                                  [wl]                      
+     0.01%  libcef.so[240c940]                                    [.] 0x000000000240c940                          libcef.so                 
+     0.01%  uncharge_batch+155                                    [k] uncharge_batch                              [kernel.kallsyms]         
+     0.01%  iov_iter_copy_from_user_atomic+36                     [k] iov_iter_copy_from_user_atomic              [kernel.kallsyms]         
+     0.01%  libcef.so[38265fd]                                    [.] 0x00000000038265fd                          libcef.so                 
+     0.01%  __add_to_page_cache_locked+292                        [k] __add_to_page_cache_locked                  [kernel.kallsyms]         
+     0.01%  i965_dri.so[3b6ef0]                                   [.] 0x00000000003b6ef0                          i965_dri.so               
+     0.01%  gtk_widget_get_type+24                                [.] gtk_widget_get_type                         libgtk-3.so.0.1800.9      
+     0.01%  libcef.so[392ea81]                                    [.] 0x000000000392ea81                          libcef.so                 
+     0.01%  chrome[2ecf5e6]                                       [.] 0x0000000002ecf5e6                          chrome                    
+     0.01%  libcef.so[3088c41]                                    [.] 0x0000000003088c41                          libcef.so                 
+     0.01%  libcef.so[4257e82]                                    [.] 0x0000000004257e82                          libcef.so                 
+     0.01%  g_type_class_ref+87                                   [.] g_type_class_ref                            libgobject-2.0.so.0.4800.2
+     0.01%  i965_dri.so[2c2251]                                   [.] 0x00000000002c2251                          i965_dri.so               
+     0.01%  libcef.so[37de0cb]                                    [.] 0x00000000037de0cb                          libcef.so                 
+     0.01%  native_queued_spin_lock_slowpath+380                  [k] native_queued_spin_lock_slowpath            [kernel.kallsyms]         
+     0.01%  libcef.so[37f9bcb]                                    [.] 0x00000000037f9bcb                          libcef.so                 
+     0.01%  libcef.so[658be15]                                    [.] 0x000000000658be15                          libcef.so                 
+     0.01%  i965_dri.so[3f4964]                                   [.] 0x00000000003f4964                          i965_dri.so               
+     0.01%  ??:0                                                  [.] 0x0000563650f5b3bd                          [unknown]                 
+     0.01%  get_page_from_freelist+375                            [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.01%  i965_dri.so[138d6b]                                   [.] 0x0000000000138d6b                          i965_dri.so               
+     0.01%  perf-963.map[1152584bf992]                            [.] 0x00001152584bf992                          perf-963.map              
+     0.01%  __ext4_journal_stop+128                               [k] __ext4_journal_stop                         [kernel.kallsyms]         
+     0.01%  __kmalloc+192                                         [k] __kmalloc                                   [kernel.kallsyms]         
+     0.01%  get_page_from_freelist+752                            [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.01%  elv_dispatch_sort+213                                 [k] elv_dispatch_sort                           [kernel.kallsyms]         
+     0.01%  pixman_region32_init+7                                [.] pixman_region32_init                        libpixman-1.so.0.33.6     
+     0.01%  rb_erase+356                                          [k] rb_erase                                    [kernel.kallsyms]         
+     0.01%  perf-963.map[11525850adce]                            [.] 0x000011525850adce                          perf-963.map              
+     0.01%  aa_sock_msg_perm+11                                   [k] aa_sock_msg_perm                            [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007f1a7d5c99a0                          [unknown]                 
+     0.01%  libcef.so[252fd1a]                                    [.] 0x000000000252fd1a                          libcef.so                 
+     0.01%  perf-963.map[1152584eca50]                            [.] 0x00001152584eca50                          perf-963.map              
+     0.01%  __tick_nohz_idle_enter+303                            [k] __tick_nohz_idle_enter                      [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007f1a77ef5797                          [unknown]                 
+     0.01%  gdk_window_invalidate_rect+0                          [.] gdk_window_invalidate_rect                  libgdk-3.so.0.1800.9      
+     0.01%  chrome[549c690]                                       [.] 0x000000000549c690                          chrome                    
+     0.01%  kmem_cache_alloc+123                                  [k] kmem_cache_alloc                            [kernel.kallsyms]         
+     0.01%  pick_next_task_fair+835                               [k] pick_next_task_fair                         [kernel.kallsyms]         
+     0.01%  perf[4197e0]                                          [.] 0x00000000000197e0                          perf                      
+     0.01%  file_update_time+98                                   [k] file_update_time                            [kernel.kallsyms]         
+     0.01%  libcef.so[3862711]                                    [.] 0x0000000003862711                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x00007f1a7d5bef00                          [unknown]                 
+     0.01%  libcef.so[6284a4a]                                    [.] 0x0000000006284a4a                          libcef.so                 
+     0.01%  spotify[ed520e]                                       [.] 0x0000000000ad520e                          spotify                   
+     0.01%  spotify[ebf230]                                       [.] 0x0000000000abf230                          spotify                   
+     0.01%  kmem_cache_free+0                                     [k] kmem_cache_free                             [kernel.kallsyms]         
+     0.01%  spotify[ef0519]                                       [.] 0x0000000000af0519                          spotify                   
+     0.01%  spotify[ef0300]                                       [.] 0x0000000000af0300                          spotify                   
+     0.01%  ??:0                                                  [.] 0x00007fc01514ba50                          [unknown]                 
+     0.01%  ext4_journal_check_start+0                            [k] ext4_journal_check_start                    [kernel.kallsyms]         
+     0.01%  perf-963.map[115258426e87]                            [.] 0x0000115258426e87                          perf-963.map              
+     0.01%  memcpy.S:80                                           [.] __memcpy_sse2                               libc-2.23.so              
+     0.01%  ??:0                                                  [.] 0x00007fc014659b4f                          [unknown]                 
+     0.01%  libcef.so[41a897e]                                    [.] 0x00000000041a897e                          libcef.so                 
+     0.01%  jbd2__journal_start+14                                [k] jbd2__journal_start                         [kernel.kallsyms]         
+     0.01%  i965_dri.so[3d8721]                                   [.] 0x00000000003d8721                          i965_dri.so               
+     0.01%  libcef.so[38b48c0]                                    [.] 0x00000000038b48c0                          libcef.so                 
+     0.01%  libcef.so[6285ab0]                                    [.] 0x0000000006285ab0                          libcef.so                 
+     0.01%  libcef.so[387c754]                                    [.] 0x000000000387c754                          libcef.so                 
+     0.01%  put_prev_task_idle+0                                  [k] put_prev_task_idle                          [kernel.kallsyms]         
+     0.01%  libcef.so[71961b0]                                    [.] 0x00000000071961b0                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x00007f1a7819a0c3                          [unknown]                 
+     0.01%  libcef.so[3235175]                                    [.] 0x0000000003235175                          libcef.so                 
+     0.01%  kmem_cache_alloc+72                                   [k] kmem_cache_alloc                            [kernel.kallsyms]         
+     0.01%  libcef.so[38e78aa]                                    [.] 0x00000000038e78aa                          libcef.so                 
+     0.01%  libcef.so[5f00982]                                    [.] 0x0000000005f00982                          libcef.so                 
+     0.01%  clock_gettime@plt+0                                   [.] clock_gettime@plt                           libstdc++.so.6.0.21       
+     0.01%  libcef.so[614c490]                                    [.] 0x000000000614c490                          libcef.so                 
+     0.01%  libcef.so[44dcda7]                                    [.] 0x00000000044dcda7                          libcef.so                 
+     0.01%  libcef.so[4c05050]                                    [.] 0x0000000004c05050                          libcef.so                 
+     0.01%  libcef.so[62e2283]                                    [.] 0x00000000062e2283                          libcef.so                 
+     0.01%  chrome[2731b25]                                       [.] 0x0000000002731b25                          chrome                    
+     0.01%  chrome[435b685]                                       [.] 0x000000000435b685                          chrome                    
+     0.01%  touch_atime+62                                        [k] touch_atime                                 [kernel.kallsyms]         
+     0.01%  libcef.so[37f8131]                                    [.] 0x00000000037f8131                          libcef.so                 
+     0.01%  libcef.so[4bf4840]                                    [.] 0x0000000004bf4840                          libcef.so                 
+     0.01%  unix_stream_read_actor+6                              [k] unix_stream_read_actor                      [kernel.kallsyms]         
+     0.01%  entry_SYSCALL_64_fastpath+8                           [k] entry_SYSCALL_64_fastpath                   [kernel.kallsyms]         
+     0.01%  __block_commit_write.isra.28+78                       [k] __block_commit_write.isra.28                [kernel.kallsyms]         
+     0.01%  set_cpu_sd_state_idle+68                              [k] set_cpu_sd_state_idle                       [kernel.kallsyms]         
+     0.01%  libcef.so[4bb8005]                                    [.] 0x0000000004bb8005                          libcef.so                 
+     0.01%  libcef.so[6764f00]                                    [.] 0x0000000006764f00                          libcef.so                 
+     0.01%  try_to_del_timer_sync+103                             [k] try_to_del_timer_sync                       [kernel.kallsyms]         
+     0.01%  cmpxchg_double_slab.isra.62+42                        [k] cmpxchg_double_slab.isra.62                 [kernel.kallsyms]         
+     0.01%  libcef.so[4c0a990]                                    [.] 0x0000000004c0a990                          libcef.so                 
+     0.01%  spotify[ed5216]                                       [.] 0x0000000000ad5216                          spotify                   
+     0.01%  libcef.so[65ecd7e]                                    [.] 0x00000000065ecd7e                          libcef.so                 
+     0.01%  libcef.so[5e46733]                                    [.] 0x0000000005e46733                          libcef.so                 
+     0.01%  libcef.so[67680bb]                                    [.] 0x00000000067680bb                          libcef.so                 
+     0.01%  jbd2_write_access_granted.part.9+55                   [k] jbd2_write_access_granted.part.9            [kernel.kallsyms]         
+     0.01%  [wl][7436a]                                           [k] 0x00000000000743da                          [wl]                      
+     0.01%  libcef.so[37fbe43]                                    [.] 0x00000000037fbe43                          libcef.so                 
+     0.01%  get_page_from_freelist+262                            [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.01%  [wl][74393]                                           [k] 0x0000000000074403                          [wl]                      
+     0.01%  __drm_mode_object_find+11                             [k] __drm_mode_object_find                      [drm]                     
+     0.01%  ??:0                                                  [.] 0x00007f1a77b941b0                          [unknown]                 
+     0.01%  __radix_tree_create+199                               [k] __radix_tree_create                         [kernel.kallsyms]         
+     0.01%  menu_reflect+0                                        [k] menu_reflect                                [kernel.kallsyms]         
+     0.01%  malloc.c:3724                                         [.] _int_malloc                                 libc-2.23.so              
+     0.01%  ??:0                                                  [.] 0x0000563650f52501                          [unknown]                 
+     0.01%  libcef.so[6143e82]                                    [.] 0x0000000006143e82                          libcef.so                 
+     0.01%  hrtimer_active+13                                     [k] hrtimer_active                              [kernel.kallsyms]         
+     0.01%  spotify[ec359c]                                       [.] 0x0000000000ac359c                          spotify                   
+     0.01%  spotify[159fe0a]                                      [.] 0x000000000119fe0a                          spotify                   
+     0.01%  libcef.so[34d3ca6]                                    [.] 0x00000000034d3ca6                          libcef.so                 
+     0.01%  libcef.so[5bdd6f0]                                    [.] 0x0000000005bdd6f0                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x0000563650fb08e0                          [unknown]                 
+     0.01%  skb_unlink+5                                          [k] skb_unlink                                  [kernel.kallsyms]         
+     0.01%  clm_limits+1339                                       [k] clm_limits                                  [wl]                      
+     0.01%  libcef.so[4c0c056]                                    [.] 0x0000000004c0c056                          libcef.so                 
+     0.01%  spotify[eed55c]                                       [.] 0x0000000000aed55c                          spotify                   
+     0.01%  ext4_da_get_block_prep+733                            [k] ext4_da_get_block_prep                      [kernel.kallsyms]         
+     0.01%  __ext4_get_inode_loc+210                              [k] __ext4_get_inode_loc                        [kernel.kallsyms]         
+     0.01%  perf-963.map[115258411fcb]                            [.] 0x0000115258411fcb                          perf-963.map              
+     0.01%  i965_dri.so[138d50]                                   [.] 0x0000000000138d50                          i965_dri.so               
+     0.01%  malloc.c:4144                                         [.] malloc_consolidate                          libc-2.23.so              
+     0.01%  libcef.so[62ed79b]                                    [.] 0x00000000062ed79b                          libcef.so                 
+     0.01%  libcef.so[6781710]                                    [.] 0x0000000006781710                          libcef.so                 
+     0.01%  PyEval_EvalFrameEx+4195505                            [.] PyEval_EvalFrameEx                          python2.7                 
+     0.01%  libcef.so[252aa20]                                    [.] 0x000000000252aa20                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x00007fc0146a2787                          [unknown]                 
+     0.01%  libcef.so[37f9f20]                                    [.] 0x00000000037f9f20                          libcef.so                 
+     0.01%  unix_stream_read_generic+800                          [k] unix_stream_read_generic                    [kernel.kallsyms]         
+     0.01%  perf-963.map[1152584bf99b]                            [.] 0x00001152584bf99b                          perf-963.map              
+     0.01%  spotify[ee6c97]                                       [.] 0x0000000000ae6c97                          spotify                   
+     0.01%  libcef.so[32020a7]                                    [.] 0x00000000032020a7                          libcef.so                 
+     0.01%  spotify[ede634]                                       [.] 0x0000000000ade634                          spotify                   
+     0.01%  memchr.S:25                                           [.] memchr                                      libc-2.23.so              
+     0.01%  libcef.so[252d490]                                    [.] 0x000000000252d490                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x00007f1a77ecc437                          [unknown]                 
+     0.01%  _raw_spin_lock_irq+27                                 [k] _raw_spin_lock_irq                          [kernel.kallsyms]         
+     0.01%  check_stack_object+14                                 [k] check_stack_object                          [kernel.kallsyms]         
+     0.01%  load_balance+356                                      [k] load_balance                                [kernel.kallsyms]         
+     0.01%  libcef.so[6762436]                                    [.] 0x0000000006762436                          libcef.so                 
+     0.01%  libcef.so[62ecdbf]                                    [.] 0x00000000062ecdbf                          libcef.so                 
+     0.01%  libcef.so[38e560c]                                    [.] 0x00000000038e560c                          libcef.so                 
+     0.01%  libcef.so[3204c3c]                                    [.] 0x0000000003204c3c                          libcef.so                 
+     0.01%  libcef.so[6425cb0]                                    [.] 0x0000000006425cb0                          libcef.so                 
+     0.01%  libcef.so[60a1d03]                                    [.] 0x00000000060a1d03                          libcef.so                 
+     0.01%  libcef.so[38b4825]                                    [.] 0x00000000038b4825                          libcef.so                 
+     0.01%  g_slice_alloc+421                                     [.] g_slice_alloc                               libglib-2.0.so.0.4800.2   
+     0.01%  perf-963.map[1152584d46a9]                            [.] 0x00001152584d46a9                          perf-963.map              
+     0.01%  __GI___libc_write+7                                   [.] __GI___libc_write                           libpthread-2.23.so        
+     0.01%  ep_poll_callback+44                                   [k] ep_poll_callback                            [kernel.kallsyms]         
+     0.01%  bcm_parse_tlvs+18446744073709551505                   [k] bcm_parse_tlvs                              [wl]                      
+     0.01%  [wl][74385]                                           [k] 0x00000000000743f5                          [wl]                      
+     0.01%  do_page_fault+16                                      [k] do_page_fault                               [kernel.kallsyms]         
+     0.01%  spotify[ee6ddb]                                       [.] 0x0000000000ae6ddb                          spotify                   
+     0.01%  balance_dirty_pages_ratelimited+17                    [k] balance_dirty_pages_ratelimited             [kernel.kallsyms]         
+     0.01%  libcef.so[65a1d6e]                                    [.] 0x00000000065a1d6e                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x00007fb2aedfab08                          [unknown]                 
+     0.01%  libcef.so[6769c8c]                                    [.] 0x0000000006769c8c                          libcef.so                 
+     0.01%  libcef.so[4b8d860]                                    [.] 0x0000000004b8d860                          libcef.so                 
+     0.01%  gen7_render_ring_flush+18446744073709551545           [k] gen7_render_ring_flush                      [i915]                    
+     0.01%  ??:0                                                  [.] 0x00007fc014e91a79                          [unknown]                 
+     0.01%  libcef.so[2531ebf]                                    [.] 0x0000000002531ebf                          libcef.so                 
+     0.01%  spotify[ee9576]                                       [.] 0x0000000000ae9576                          spotify                   
+     0.01%  migrate_task_rq_fair+32                               [k] migrate_task_rq_fair                        [kernel.kallsyms]         
+     0.01%  libcef.so[31f44ea]                                    [.] 0x00000000031f44ea                          libcef.so                 
+     0.01%  libcef.so[2592e23]                                    [.] 0x0000000002592e23                          libcef.so                 
+     0.01%  libcef.so[676de7a]                                    [.] 0x000000000676de7a                          libcef.so                 
+     0.01%  libcef.so[676d3d7]                                    [.] 0x000000000676d3d7                          libcef.so                 
+     0.01%  spotify[168ba94]                                      [.] 0x000000000128ba94                          spotify                   
+     0.01%  perf-963.map[115258411bd2]                            [.] 0x0000115258411bd2                          perf-963.map              
+     0.01%  sock_poll+44                                          [k] sock_poll                                   [kernel.kallsyms]         
+     0.01%  libcef.so[386dc10]                                    [.] 0x000000000386dc10                          libcef.so                 
+     0.01%  perf-963.map[1152584302e0]                            [.] 0x00001152584302e0                          perf-963.map              
+     0.01%  perf-963.map[11525842b6c0]                            [.] 0x000011525842b6c0                          perf-963.map              
+     0.01%  __radix_tree_lookup+129                               [k] __radix_tree_lookup                         [kernel.kallsyms]         
+     0.01%  libcef.so[6591c40]                                    [.] 0x0000000006591c40                          libcef.so                 
+     0.01%  mutex_unlock+0                                        [k] mutex_unlock                                [kernel.kallsyms]         
+     0.01%  spotify[ede4f8]                                       [.] 0x0000000000ade4f8                          spotify                   
+     0.01%  libcef.so[240b52d]                                    [.] 0x000000000240b52d                          libcef.so                 
+     0.01%  iov_iter_advance+138                                  [k] iov_iter_advance                            [kernel.kallsyms]         
+     0.01%  unlock_page+0                                         [k] unlock_page                                 [kernel.kallsyms]         
+     0.01%  libcef.so[386234f]                                    [.] 0x000000000386234f                          libcef.so                 
+     0.01%  libcef.so[4c0a361]                                    [.] 0x0000000004c0a361                          libcef.so                 
+     0.01%  libcef.so[395d992]                                    [.] 0x000000000395d992                          libcef.so                 
+     0.01%  libcef.so[2cfb560]                                    [.] 0x0000000002cfb560                          libcef.so                 
+     0.01%  libcef.so[65e60e2]                                    [.] 0x00000000065e60e2                          libcef.so                 
+     0.01%  pagecache_get_page+9                                  [k] pagecache_get_page                          [kernel.kallsyms]         
+     0.01%  libcef.so[31b6b56]                                    [.] 0x00000000031b6b56                          libcef.so                 
+     0.01%  libcef.so[27cb786]                                    [.] 0x00000000027cb786                          libcef.so                 
+     0.01%  spotify[ee8678]                                       [.] 0x0000000000ae8678                          spotify                   
+     0.01%  perf-963.map[11525860e9fd]                            [.] 0x000011525860e9fd                          perf-963.map              
+     0.01%  libcef.so[3a3428a]                                    [.] 0x0000000003a3428a                          libcef.so                 
+     0.01%  cpuacct_charge+0                                      [k] cpuacct_charge                              [kernel.kallsyms]         
+     0.01%  spotify[ede512]                                       [.] 0x0000000000ade512                          spotify                   
+     0.01%  spotify[ee8f9b]                                       [.] 0x0000000000ae8f9b                          spotify                   
+     0.01%  kmem_cache_alloc+251                                  [k] kmem_cache_alloc                            [kernel.kallsyms]         
+     0.01%  __percpu_counter_add+92                               [k] __percpu_counter_add                        [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007f1a7d630aec                          [unknown]                 
+     0.01%  jbd2_write_access_granted.part.9+52                   [k] jbd2_write_access_granted.part.9            [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x000055edc534a8cb                          [unknown]                 
+     0.01%  get_page_from_freelist+634                            [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.01%  __check_heap_object+72                                [k] __check_heap_object                         [kernel.kallsyms]         
+     0.01%  libcef.so[37dfa6a]                                    [.] 0x00000000037dfa6a                          libcef.so                 
+     0.01%  select_idle_sibling+701                               [k] select_idle_sibling                         [kernel.kallsyms]         
+     0.01%  libcef.so[6591ca4]                                    [.] 0x0000000006591ca4                          libcef.so                 
+     0.01%  libcef.so[6564190]                                    [.] 0x0000000006564190                          libcef.so                 
+     0.01%  libcef.so[396f19c]                                    [.] 0x000000000396f19c                          libcef.so                 
+     0.01%  libcef.so[4c08430]                                    [.] 0x0000000004c08430                          libcef.so                 
+     0.01%  advance_transaction+746                               [k] advance_transaction                         [kernel.kallsyms]         
+     0.01%  __fget_light+21                                       [k] __fget_light                                [kernel.kallsyms]         
+     0.01%  perf[41be6d]                                          [.] 0x000000000001be6d                          perf                      
+     0.01%  dbus-daemon[17a7e]                                    [.] 0x0000000000017a7e                          dbus-daemon               
+     0.01%  create_empty_buffers+200                              [k] create_empty_buffers                        [kernel.kallsyms]         
+     0.01%  ext4_journal_check_start+55                           [k] ext4_journal_check_start                    [kernel.kallsyms]         
+     0.01%  libcef.so[4ba0b3c]                                    [.] 0x0000000004ba0b3c                          libcef.so                 
+     0.01%  select_estimate_accuracy.part.8+13                    [k] select_estimate_accuracy.part.8             [kernel.kallsyms]         
+     0.01%  perf-963.map[1152584ecb63]                            [.] 0x00001152584ecb63                          perf-963.map              
+     0.01%  perf[54b8a9]                                          [.] 0x000000000014b8a9                          perf                      
+     0.01%  libcef.so[38de9c4]                                    [.] 0x00000000038de9c4                          libcef.so                 
+     0.01%  libcef.so[4b8d09b]                                    [.] 0x0000000004b8d09b                          libcef.so                 
+     0.01%  jbd2__journal_start+254                               [k] jbd2__journal_start                         [kernel.kallsyms]         
+     0.01%  __lock_text_start+27                                  [k] __lock_text_start                           [kernel.kallsyms]         
+     0.01%  create_empty_buffers+180                              [k] create_empty_buffers                        [kernel.kallsyms]         
+     0.01%  cairo_surface_create_similar+122                      [.] cairo_surface_create_similar                libcairo.so.2.11400.6     
+     0.01%  check_stack_object+136                                [k] check_stack_object                          [kernel.kallsyms]         
+     0.01%  g_list_free_1+0                                       [.] g_list_free_1                               libglib-2.0.so.0.4800.2   
+     0.01%  libcef.so[6036a2a]                                    [.] 0x0000000006036a2a                          libcef.so                 
+     0.01%  libcef.so[65e681a]                                    [.] 0x00000000065e681a                          libcef.so                 
+     0.01%  ??:0                                                  [.] 0x00007f1a77f25643                          [unknown]                 
+     0.01%  malloc.c:4094                                         [.] _int_free                                   libc-2.23.so              
+     0.01%  libcef.so[391fc4a]                                    [.] 0x000000000391fc4a                          libcef.so                 
+     0.01%  get_page_from_freelist+619                            [k] get_page_from_freelist                      [kernel.kallsyms]         
+     0.01%  libcef.so[61352d4]                                    [.] 0x00000000061352d4                          libcef.so                 
+     0.01%  libcef.so[26fd4b2]                                    [.] 0x00000000026fd4b2                          libcef.so                 
+     0.01%  timerqueue_add+18                                     [k] timerqueue_add                              [kernel.kallsyms]         
+     0.01%  check_stack_object+0                                  [k] check_stack_object                          [kernel.kallsyms]         
+     0.01%  perf-963.map[11525845375c]                            [.] 0x000011525845375c                          perf-963.map              
+     0.01%  spotify[ef0525]                                       [.] 0x0000000000af0525                          spotify                   
+     0.01%  spotify[ee6d30]                                       [.] 0x0000000000ae6d30                          spotify                   
+     0.01%  pick_next_task_fair+233                               [k] pick_next_task_fair                         [kernel.kallsyms]         
+     0.01%  libcef.so[252e137]                                    [.] 0x000000000252e137                          libcef.so                 
+     0.01%  libcef.so[27afcc0]                                    [.] 0x00000000027afcc0                          libcef.so                 
+     0.01%  jbd2_journal_stop+319                                 [k] jbd2_journal_stop                           [kernel.kallsyms]         
+     0.01%  __add_to_page_cache_locked+205                        [k] __add_to_page_cache_locked                  [kernel.kallsyms]         
+     0.01%  start_this_handle+312                                 [k] start_this_handle                           [kernel.kallsyms]         
+     0.01%  libcef.so[5efff12]                                    [.] 0x0000000005efff12                          libcef.so                 
+     0.01%  libcef.so[394e205]                                    [.] 0x000000000394e205                          libcef.so                 
+     0.01%  ext4_do_update_inode+1475                             [k] ext4_do_update_inode                        [kernel.kallsyms]         
+     0.01%  bcm5974_irq_trackpad+70                               [k] bcm5974_irq_trackpad                        [bcm5974]                 
+     0.01%  libcef.so[3327060]                                    [.] 0x0000000003327060                          libcef.so                 
+     0.01%  spotify[eef05b]                                       [.] 0x0000000000aef05b                          spotify                   
+     0.01%  libcef.so[3808b26]                                    [.] 0x0000000003808b26                          libcef.so                 
+     0.01%  rb_erase+260                                          [k] rb_erase                                    [kernel.kallsyms]         
+     0.01%  _raw_spin_lock_irq+10                                 [k] _raw_spin_lock_irq                          [kernel.kallsyms]         
+     0.01%  policy_zonelist+77                                    [k] policy_zonelist                             [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007f8c60a3cfa6                          [unknown]                 
+     0.01%  ext4_do_update_inode+28                               [k] ext4_do_update_inode                        [kernel.kallsyms]         
+     0.01%  ahci_single_level_irq_intr+18446744073709551533       [k] ahci_single_level_irq_intr                  [libahci]                 
+     0.01%  kmem_cache_free+422                                   [k] kmem_cache_free                             [kernel.kallsyms]         
+     0.01%  update_cfs_rq_load_avg.constprop.90+303               [k] update_cfs_rq_load_avg.constprop.90         [kernel.kallsyms]         
+     0.01%  libcef.so[3973c99]                                    [.] 0x0000000003973c99                          libcef.so                 
+     0.01%  std::chrono::_V2::steady_clock::now+0                 [.] std::chrono::_V2::steady_clock::now         libstdc++.so.6.0.21       
+     0.01%  libcef.so[6143e3e]                                    [.] 0x0000000006143e3e                          libcef.so                 
+     0.01%  jbd2__journal_start+34                                [k] jbd2__journal_start                         [kernel.kallsyms]         
+     0.01%  __radix_tree_lookup+200                               [k] __radix_tree_lookup                         [kernel.kallsyms]         
+     0.01%  __dquot_alloc_space+54                                [k] __dquot_alloc_space                         [kernel.kallsyms]         
+     0.01%  __es_remove_extent+546                                [k] __es_remove_extent                          [kernel.kallsyms]         
+     0.01%  iov_iter_copy_from_user_atomic+146                    [k] iov_iter_copy_from_user_atomic              [kernel.kallsyms]         
+     0.01%  __schedule+203                                        [k] __schedule                                  [kernel.kallsyms]         
+     0.01%  iov_iter_copy_from_user_atomic+15                     [k] iov_iter_copy_from_user_atomic              [kernel.kallsyms]         
+     0.01%  __mark_inode_dirty+77                                 [k] __mark_inode_dirty                          [kernel.kallsyms]         
+     0.01%  perf-963.map[1152584583e0]                            [.] 0x00001152584583e0                          perf-963.map              
+     0.01%  __mnt_want_write_file+29                              [k] __mnt_want_write_file                       [kernel.kallsyms]         
+     0.01%  __ext4_journal_start_sb+11                            [k] __ext4_journal_start_sb                     [kernel.kallsyms]         
+     0.01%  pa_memexport_process_release+21                       [.] pa_memexport_process_release                libpulsecommon-8.0.so     
+     0.01%  update_load_avg+621                                   [k] update_load_avg                             [kernel.kallsyms]         
+     0.01%  run_posix_cpu_timers+965                              [k] run_posix_cpu_timers                        [kernel.kallsyms]         
+     0.01%  libcef.so[676a09c]                                    [.] 0x000000000676a09c                          libcef.so                 
+     0.01%  dbus_connection_get_dispatch_status+18                [.] dbus_connection_get_dispatch_status         libdbus-1.so.3.14.6       
+     0.01%  __ext4_get_inode_loc+213                              [k] __ext4_get_inode_loc                        [kernel.kallsyms]         
+     0.01%  perf-963.map[1152584bf96f]                            [.] 0x00001152584bf96f                          perf-963.map              
+     0.01%  put_prev_task_fair+46                                 [k] put_prev_task_fair                          [kernel.kallsyms]         
+     0.01%  dbus-daemon[236e3]                                    [.] 0x00000000000236e3                          dbus-daemon               
+     0.01%  __pagevec_lru_add_fn+470                              [k] __pagevec_lru_add_fn                        [kernel.kallsyms]         
+     0.01%  spotify[ee8f87]                                       [.] 0x0000000000ae8f87                          spotify                   
+     0.01%  ??:0                                                  [.] 0x00007fc01468dc7e                          [unknown]                 
+     0.01%  ext4_mark_iloc_dirty+82                               [k] ext4_mark_iloc_dirty                        [kernel.kallsyms]         
+     0.01%  __find_get_block+85                                   [k] __find_get_block                            [kernel.kallsyms]         
+     0.01%  get_task_policy.part.31+5                             [k] get_task_policy.part.31                     [kernel.kallsyms]         
+     0.01%  perf-963.map[1152584ecd0d]                            [.] 0x00001152584ecd0d                          perf-963.map              
+     0.01%  spotify[ee887c]                                       [.] 0x0000000000ae887c                          spotify                   
+     0.01%  __radix_tree_lookup+64                                [k] __radix_tree_lookup                         [kernel.kallsyms]         
+     0.01%  libcef.so[61d0dc0]                                    [.] 0x00000000061d0dc0                          libcef.so                 
+     0.01%  libcef.so[6825fbc]                                    [.] 0x0000000006825fbc                          libcef.so                 
+     0.01%  ext4_block_write_begin+344                            [k] ext4_block_write_begin                      [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007f8c60a4de54                          [unknown]                 
+     0.01%  spotify[ee7341]                                       [.] 0x0000000000ae7341                          spotify                   
+     0.01%  page_cache_tree_insert+0                              [k] page_cache_tree_insert                      [kernel.kallsyms]         
+     0.01%  __es_insert_extent+411                                [k] __es_insert_extent                          [kernel.kallsyms]         
+     0.01%  ext4_do_update_inode+350                              [k] ext4_do_update_inode                        [kernel.kallsyms]         
+     0.01%  fsnotify+20                                           [k] fsnotify                                    [kernel.kallsyms]         
+     0.01%  tsc_verify_tsc_adjust+65                              [k] tsc_verify_tsc_adjust                       [kernel.kallsyms]         
+     0.01%  acpi_hw_read+296                                      [k] acpi_hw_read                                [kernel.kallsyms]         
+     0.01%  io_schedule_timeout+164                               [k] io_schedule_timeout                         [kernel.kallsyms]         
+     0.01%  libcef.so[3326547]                                    [.] 0x0000000003326547                          libcef.so                 
+     0.01%  block_write_end+6                                     [k] block_write_end                             [kernel.kallsyms]         
+     0.01%  libcef.so[250afa0]                                    [.] 0x000000000250afa0                          libcef.so                 
+     0.01%  ext4_do_update_inode+1275                             [k] ext4_do_update_inode                        [kernel.kallsyms]         
+     0.01%  acpi_os_read_port+88                                  [k] acpi_os_read_port                           [kernel.kallsyms]         
+     0.01%  down_read+25                                          [k] down_read                                   [kernel.kallsyms]         
+     0.01%  malloc.c:3421                                         [.] _int_malloc                                 libc-2.23.so              
+     0.01%  select_estimate_accuracy.part.8+175                   [k] select_estimate_accuracy.part.8             [kernel.kallsyms]         
+     0.01%  set_cpu_sd_state_idle+0                               [k] set_cpu_sd_state_idle                       [kernel.kallsyms]         
+     0.01%  radix_tree_tag_set+140                                [k] radix_tree_tag_set                          [kernel.kallsyms]         
+     0.01%  jbd2__journal_start+140                               [k] jbd2__journal_start                         [kernel.kallsyms]         
+     0.01%  ext4_da_get_block_prep+265                            [k] ext4_da_get_block_prep                      [kernel.kallsyms]         
+     0.01%  intel_pstate_update_util+0                            [k] intel_pstate_update_util                    [kernel.kallsyms]         
+     0.01%  __sb_end_write+0                                      [k] __sb_end_write                              [kernel.kallsyms]         
+     0.01%  generic_write_checks+23                               [k] generic_write_checks                        [kernel.kallsyms]         
+     0.01%  intel_idle+0                                          [k] intel_idle                                  [kernel.kallsyms]         
+     0.01%  ??:0                                                  [.] 0x00007fc014e4cc80                          [unknown]                 
+     0.01%  __fget+64                                             [k] __fget                                      [kernel.kallsyms]         
+     0.01%  libcef.so[37f8130]                                    [.] 0x00000000037f8130                          libcef.so                 
+     0.01%  libpulsecommon-8.0.so[29739]                          [.] 0x0000000000029739                          libpulsecommon-8.0.so     
+     0.01%  __tick_nohz_idle_enter+617                            [k] __tick_nohz_idle_enter                      [kernel.kallsyms]         
+     0.01%  jbd2_log_wait_commit+130                              [k] jbd2_log_wait_commit                        [kernel.kallsyms]         
+     0.01%  libcef.so[670fdbf]                                    [.] 0x000000000670fdbf                          libcef.so                 
+     0.01%  __add_to_page_cache_locked+138                        [k] __add_to_page_cache_locked                  [kernel.kallsyms]         
+     0.01%  menu_select+5                                         [k] menu_select                                 [kernel.kallsyms]         
+     0.01%  start_this_handle+149                                 [k] start_this_handle                           [kernel.kallsyms]         
+     0.01%  mark_buffer_dirty+46                                  [k] mark_buffer_dirty                           [kernel.kallsyms]         
+     0.01%  __ext4_journal_start_sb+41                            [k] __ext4_journal_start_sb                     [kernel.kallsyms]         
+     0.01%  iov_iter_advance+0                                    [k] iov_iter_advance                            [kernel.kallsyms]         
+     0.01%  pthread_mutex_lock+0                                  [.] pthread_mutex_lock                          libpthread-2.23.so        
+     0.01%  rb_erase+189                                          [k] rb_erase                                    [kernel.kallsyms]         
+     0.01%  common_interrupt+132                                  [k] common_interrupt                            [kernel.kallsyms]         
+     0.01%  __radix_tree_preload+43                               [k] __radix_tree_preload                        [kernel.kallsyms]         
+     0.01%  spotify[636eb2]                                       [.] 0x0000000000236eb2                          spotify                   
+     0.01%  g_mutex_unlock+4                                      [.] g_mutex_unlock                              libglib-2.0.so.0.4800.2   
+     0.01%  __next_timer_interrupt+59                             [k] __next_timer_interrupt                      [kernel.kallsyms]         
+     0.01%  __lock_text_start+21                                  [k] __lock_text_start                           [kernel.kallsyms]         
+     0.01%  select_task_rq_fair+0                                 [k] select_task_rq_fair                         [kernel.kallsyms]         
+     0.01%  libcef.so[332ef0c]                                    [.] 0x000000000332ef0c                          libcef.so                 
+     0.01%  __sb_start_write+0                                    [k] __sb_start_write                            [kernel.kallsyms]         
+     0.01%  libcef.so[252def6]                                    [.] 0x000000000252def6                          libcef.so                 
+     0.01%  g_param_spec_pool_lookup+335                          [.] g_param_spec_pool_lookup                    libgobject-2.0.so.0.4800.2
+     0.01%  libcef.so[65e6294]                                    [.] 0x00000000065e6294                          libcef.so                 
+     0.01%  ext4_es_insert_extent+138                             [k] ext4_es_insert_extent                       [kernel.kallsyms]         
+     0.01%  perf-963.map[1152584ea012]                            [.] 0x00001152584ea012                          perf-963.map              
+     0.01%  __brelse+16                                           [k] __brelse                                    [kernel.kallsyms]         
+     0.01%  restore_c_regs_and_iret+20                            [k] restore_c_regs_and_iret                     [kernel.kallsyms]         
+     0.01%  find_get_pages+0                                      [k] find_get_pages                              [kernel.kallsyms]         
+     0.01%  jbd2_journal_stop+64                                  [k] jbd2_journal_stop                           [kernel.kallsyms]         
+     0.01%  __lru_cache_add+48                                    [k] __lru_cache_add                             [kernel.kallsyms]         
+     0.01%  mark_buffer_dirty+92                                  [k] mark_buffer_dirty                           [kernel.kallsyms]         
+     0.01%  advance_transaction+910                               [k] advance_transaction                         [kernel.kallsyms]         
+     0.01%  spotify[ede726]                                       [.] 0x0000000000ade726                          spotify                   
+     0.01%  iov_iter_advance+141                                  [k] iov_iter_advance                            [kernel.kallsyms]         
+     0.01%  do_sys_poll+894                                       [k] do_sys_poll                                 [kernel.kallsyms]         
+     0.01%  do_futex+138                                          [k] do_futex                                    [kernel.kallsyms]         
+     0.01%  spotify[edd780]                                       [.] 0x0000000000add780                          spotify                   
+     0.01%  spotify[ee6d10]                                       [.] 0x0000000000ae6d10                          spotify                   
+     0.01%  common_file_perm+57                                   [k] common_file_perm                            [kernel.kallsyms]         
+     0.01%  __radix_tree_create+52                                [k] __radix_tree_create                         [kernel.kallsyms]         
+     0.01%  libcef.so[3e8428f]                                    [.] 0x0000000003e8428f                          libcef.so                 
+     0.01%  account_entity_dequeue+164                            [k] account_entity_dequeue                      [kernel.kallsyms]         
+     0.01%  spotify[ee8833]                                       [.] 0x0000000000ae8833                          spotify                   
+     0.01%  std::max<float>+4194313                               [.] std::max<float>                             spotify                   
+     0.01%  update_blocked_averages+976                           [k] update_blocked_averages                     [kernel.kallsyms]         
+     0.01%  PageHuge+9                                            [k] PageHuge                                    [kernel.kallsyms]         
+     0.01%  account_page_dirtied+250                              [k] account_page_dirtied                        [kernel.kallsyms]         
+     0.01%  __page_cache_alloc+180                                [k] __page_cache_alloc                          [kernel.kallsyms]         
+     0.01%  libcef.so[394f30f]                                    [.] 0x000000000394f30f                          libcef.so                 
+     0.01%  sock_poll+38                                          [k] sock_poll                                   [kernel.kallsyms]         
+     0.01%  pa_msgobject_check_type+0                             [.] pa_msgobject_check_type                     libpulsecore-8.0.so       
+     0.01%  jbd2_journal_stop+333                                 [k] jbd2_journal_stop                           [kernel.kallsyms]         
+     0.01%  jbd2_journal_stop+408                                 [k] jbd2_journal_stop                           [kernel.kallsyms]         
+     0.01%  g_main_context_check+408                              [.] g_main_context_check                        libglib-2.0.so.0.4800.2   
+     0.01%  __ext4_handle_dirty_metadata+52                       [k] __ext4_handle_dirty_metadata                [kernel.kallsyms]         
+     0.01%  ext4_do_update_inode+1192                             [k] ext4_do_update_inode                        [kernel.kallsyms]         
+     0.01%  cpuidle_enter_state+299                               [k] cpuidle_enter_state                         [kernel.kallsyms]         
+     0.01%  [wl][7438c]                                           [k] 0x00000000000743fc                          [wl]                      
+     0.01%  libcef.so[391dfa5]                                    [.] 0x000000000391dfa5                          libcef.so                 
+     0.01%  libcef.so[2f786a0]                                    [.] 0x0000000002f786a0                          libcef.so                 
+     0.01%  bio_integrity_enabled+0                               [k] bio_integrity_enabled                       [kernel.kallsyms]         
+     0.01%  spotify[782fc0]                                       [.] 0x0000000000382fc0                          spotify                   
+     0.01%  ext4_da_write_end+26                                  [k] ext4_da_write_end                           [kernel.kallsyms]         
+     0.01%  alloc_buffer_head+5                                   [k] alloc_buffer_head                           [kernel.kallsyms]         
+     0.01%  workingset_update_node+70                             [k] workingset_update_node                      [kernel.kallsyms]         
+     0.00%  boost::this_thread::interruption_requested+4194304    [.] boost::this_thread::interruption_requested  spotify                   
+     0.00%  spotify[ee72dc]                                       [.] 0x0000000000ae72dc                          spotify                   
+     0.00%  ??:0                                                  [.] 0x00007fc015128c6a                          [unknown]                 
+     0.00%  update_load_avg+1058                                  [k] update_load_avg                             [kernel.kallsyms]         
+     0.00%  anon_pipe_buf_release+85                              [k] anon_pipe_buf_release                       [kernel.kallsyms]         
+     0.00%  ec_guard+365                                          [k] ec_guard                                    [kernel.kallsyms]         
+     0.00%  menu_select+717                                       [k] menu_select                                 [kernel.kallsyms]         
+     0.00%  _raw_spin_lock_irqsave+10                             [k] _raw_spin_lock_irqsave                      [kernel.kallsyms]         
+     0.00%  ??:0                                                  [.] 0x00007fc015128813                          [unknown]                 
+     0.00%  ??:0                                                  [.] 0x00007fc0146904f2                          [unknown]                 
+     0.00%  leave_mm+13                                           [k] leave_mm                                    [kernel.kallsyms]         
+     0.00%  mutex_lock+34                                         [k] mutex_lock                                  [kernel.kallsyms]         
+     0.00%  __softirqentry_text_start+225                         [k] __softirqentry_text_start                   [kernel.kallsyms]         
+
+
+#
+# (Tip: To change sampling frequency to 100 Hz: perf record -F 100)
+#

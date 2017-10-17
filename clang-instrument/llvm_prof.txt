@@ -1,0 +1,27 @@
+_Z9factoriali
+# Func Hash:
+650
+# Num Counters:
+3
+# Counter Values:
+998000
+0
+1000
+
+main
+# Func Hash:
+4
+# Num Counters:
+2
+# Counter Values:
+1
+1000
+
+_Z3addii
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+0
+
