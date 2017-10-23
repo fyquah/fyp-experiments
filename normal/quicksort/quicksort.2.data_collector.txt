@@ -1,0 +1,19 @@
+# The calls are from left to right -- ToS is at the furthest right
+Pervasives.exit/1294:0,YES
+test_sort/273:0,NO
+qsort2/130:1,NO
+qsort2/130:2,NO
+qsort2/130:2,NO
+test_sort/273:0,NO
+qsort/25:1,NO
+qsort/25:2,NO
+qsort/25:2,NO
+test_sort/273:0,NO
+qsort2/130:1,NO
+test_sort/273:0,NO
+qsort/25:1,NO
+qsort2/130:0,NO
+qsort2/130:0,NO
+qsort/25:0,NO
+qsort/25:0,NO
+Pervasives.print_newline/1085:0,YES
