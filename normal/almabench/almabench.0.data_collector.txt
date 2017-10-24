@@ -1,0 +1,10 @@
+# The calls are from left to right -- ToS is at the furthest right
+TOP_LEVEL:12,[Gc.print_stat/22],NO
+TOP_LEVEL:10,[Pervasives.open_out/605],YES
+TOP_LEVEL:10,Pervasives.open_out/605:0,[Pervasives.open_out_gen/592],NO
+TOP_LEVEL:9,[radecdist/1732],NO
+TOP_LEVEL:6,[planetpv/950],NO
+TOP_LEVEL:5,[radecdist/1732],NO
+TOP_LEVEL:2,[planetpv/950],NO
+{planetpv/950},planetpv/950:1,[anpm/930],NO
+{planetpv/950},planetpv/950:0,[anpm/930],NO
