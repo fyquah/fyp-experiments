@@ -41,7 +41,7 @@ and gaussk    = 0.01720209895
 
 (* number of days to include in test *)
 let test_loops  = 50  (* was: 20 *)
-and test_length = 36525
+and test_length = 16525
 
 (* sin and cos of j2000 mean obliquity (iau 1976) *)
 and sineps = 0.3977771559319137
