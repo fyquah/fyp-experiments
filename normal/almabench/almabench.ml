@@ -40,7 +40,7 @@ and r2d       = 180.0 /. pic
 and gaussk    = 0.01720209895
 
 (* number of days to include in test *)
-let test_loops  = 5  (* was: 20 *)
+let test_loops  = 50  (* was: 20 *)
 and test_length = 36525
 
 (* sin and cos of j2000 mean obliquity (iau 1976) *)
@@ -314,7 +314,7 @@ let _ =
   for p = 0 to 7 do
     planetpv jd p pv;
     radecdist pv position;
-(*    Printf.printf "%d %.2f %.2f\n%!" p position.(0) position.(1)*)
+    Printf.printf "%d %.2f %.2f\n%!" p position.(0) position.(1)
   done;
   (* Benchmark *)
   for i = 0 to test_loops - 1 do
