@@ -328,6 +328,7 @@ let _ =
       for p = 0 to 7 do
 	planetpv_hello p;
 	radecdist pv position;
+        Printf.printf "%d %.2f %.2f\n%!" p position.(0) position.(1)
       done
     done
   done
