@@ -1,0 +1,193 @@
+echo '()' >overrides.sexp
+rm -rf *.cm* *.native *.o *.data_collector.sexp
+Shell: make clean
+((((At_call_site TOP_LEVEL 23 ((Gc camlGc) print_stat 22)))
+  ((Gc camlGc) print_stat 22) false)
+ (((At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605)))
+  ((Pervasives camlPervasives) open_out 605) true)
+ (((At_call_site ((Pervasives camlPervasives) open_out 605) 0
+    ((Pervasives camlPervasives) open_out_gen 592))
+   (At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605)))
+  ((Pervasives camlPervasives) open_out_gen 592) false)
+ (((At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145)))
+  ((Printf camlPrintf) printf 145) true)
+ (((At_call_site ((Printf camlPrintf) printf 145) 0
+    ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764))
+   (At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145)))
+  ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764) false)
+ (((At_call_site TOP_LEVEL 16 ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) radecdist 1732) false)
+ (((At_call_site TOP_LEVEL 14
+    ((Almabench camlAlmabench) planetpv_hello 2022)))
+  ((Almabench camlAlmabench) planetpv_hello 2022) true)
+ (((At_call_site ((Almabench camlAlmabench) planetpv_hello 2022) 0
+    ((Almabench camlAlmabench) planetpv 950))
+   (At_call_site TOP_LEVEL 14
+    ((Almabench camlAlmabench) planetpv_hello 2022)))
+  ((Almabench camlAlmabench) planetpv 950) false)
+ (((At_call_site ((Almabench camlAlmabench) planetpv_hello 2022) 13
+    ((Almabench camlAlmabench) planetpv 950))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) planetpv_hello 2022)))
+  ((Almabench camlAlmabench) planetpv 950) false)
+ (((At_call_site TOP_LEVEL 10 ((Printf camlPrintf) printf 145)))
+  ((Printf camlPrintf) printf 145) true)
+ (((At_call_site ((Printf camlPrintf) printf 145) 0
+    ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764))
+   (At_call_site TOP_LEVEL 10 ((Printf camlPrintf) printf 145)))
+  ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764) false)
+ (((At_call_site TOP_LEVEL 8 ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) radecdist 1732) false)
+ (((At_call_site TOP_LEVEL 5 ((Almabench camlAlmabench) planetpv 950)))
+  ((Almabench camlAlmabench) planetpv 950) false)
+ (((At_call_site ((Almabench camlAlmabench) radecdist 1732) 4
+    ((Almabench camlAlmabench) super_function 1803))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) super_function 1803) false)
+ (((At_call_site ((Almabench camlAlmabench) super_function 1803) 3
+    ((Almabench camlAlmabench) f 1809))
+   (Enter_decl ((Almabench camlAlmabench) radecdist 1732)
+    ((Almabench camlAlmabench) super_function 1803))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) f 1809) true)
+ (((At_call_site ((Almabench camlAlmabench) f 1809) 2
+    ((List camlList) length 167))
+   (Enter_decl ((Almabench camlAlmabench) super_function 1803)
+    ((Almabench camlAlmabench) f 1809))
+   (Enter_decl ((Almabench camlAlmabench) radecdist 1732)
+    ((Almabench camlAlmabench) super_function 1803))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) radecdist 1732)))
+  ((List camlList) length 167) true)
+ (((At_call_site ((Almabench camlAlmabench) planetpv 950) 1
+    ((Almabench camlAlmabench) anpm 930))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) planetpv 950)))
+  ((Almabench camlAlmabench) anpm 930) false)
+ (((At_call_site ((Almabench camlAlmabench) planetpv 950) 0
+    ((Almabench camlAlmabench) anpm 930))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) planetpv 950)))
+  ((Almabench camlAlmabench) anpm 930) false))((((At_call_site TOP_LEVEL 23 ((Gc camlGc) print_stat 22)))
+  ((Gc camlGc) print_stat 22) false)
+ (((At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605)))
+  ((Pervasives camlPervasives) open_out 605) true)
+ (((At_call_site ((Pervasives camlPervasives) open_out 605) 0
+    ((Pervasives camlPervasives) open_out_gen 592))
+   (At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605)))
+  ((Pervasives camlPervasives) open_out_gen 592) false)
+ (((At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145)))
+  ((Printf camlPrintf) printf 145) true)
+ (((At_call_site ((Printf camlPrintf) printf 145) 0
+    ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764))
+   (At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145)))
+  ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764) false)
+ (((At_call_site TOP_LEVEL 16 ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) radecdist 1732) false)
+ (((At_call_site TOP_LEVEL 14
+    ((Almabench camlAlmabench) planetpv_hello 2022)))
+  ((Almabench camlAlmabench) planetpv_hello 2022) true)
+ (((At_call_site ((Almabench camlAlmabench) planetpv_hello 2022) 0
+    ((Almabench camlAlmabench) planetpv 950))
+   (At_call_site TOP_LEVEL 14
+    ((Almabench camlAlmabench) planetpv_hello 2022)))
+  ((Almabench camlAlmabench) planetpv 950) false)
+ (((At_call_site ((Almabench camlAlmabench) planetpv_hello 2022) 13
+    ((Almabench camlAlmabench) planetpv 950))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) planetpv_hello 2022)))
+  ((Almabench camlAlmabench) planetpv 950) false)
+ (((At_call_site TOP_LEVEL 10 ((Printf camlPrintf) printf 145)))
+  ((Printf camlPrintf) printf 145) true)
+ (((At_call_site ((Printf camlPrintf) printf 145) 0
+    ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764))
+   (At_call_site TOP_LEVEL 10 ((Printf camlPrintf) printf 145)))
+  ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764) false)
+ (((At_call_site TOP_LEVEL 8 ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) radecdist 1732) false)
+ (((At_call_site TOP_LEVEL 5 ((Almabench camlAlmabench) planetpv 950)))
+  ((Almabench camlAlmabench) planetpv 950) false)
+ (((At_call_site ((Almabench camlAlmabench) radecdist 1732) 4
+    ((Almabench camlAlmabench) super_function 1803))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) super_function 1803) false)
+ (((At_call_site ((Almabench camlAlmabench) super_function 1803) 3
+    ((Almabench camlAlmabench) f 1809))
+   (Enter_decl ((Almabench camlAlmabench) radecdist 1732)
+    ((Almabench camlAlmabench) super_function 1803))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) radecdist 1732)))
+  ((Almabench camlAlmabench) f 1809) true)
+ (((At_call_site ((Almabench camlAlmabench) f 1809) 2
+    ((List camlList) length 167))
+   (Enter_decl ((Almabench camlAlmabench) super_function 1803)
+    ((Almabench camlAlmabench) f 1809))
+   (Enter_decl ((Almabench camlAlmabench) radecdist 1732)
+    ((Almabench camlAlmabench) super_function 1803))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) radecdist 1732)))
+  ((List camlList) length 167) true)
+ (((At_call_site ((Almabench camlAlmabench) planetpv 950) 1
+    ((Almabench camlAlmabench) anpm 930))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) planetpv 950)))
+  ((Almabench camlAlmabench) anpm 930) false)
+ (((At_call_site ((Almabench camlAlmabench) planetpv 950) 0
+    ((Almabench camlAlmabench) anpm 930))
+   (Enter_decl TOP_LEVEL ((Almabench camlAlmabench) planetpv 950)))
+  ((Almabench camlAlmabench) anpm 930) false))echo '()' >overrides.sexp
+rm -rf *.cm* *.native *.o *.data_collector.sexp
+../../../ocaml/ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inlining-overrides overrides.sexp -o almabench.native almabench.ml 2>flambda.out
+Loaded override devisions: 
+=> (((At_call_site TOP_LEVEL 23 ((Gc camlGc) print_stat 22))) ((Gc camlGc) print_stat 22) true)
+=> (((At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605))) ((Pervasives camlPervasives) open_out 605) false)
+
+OVERRIDE Applied = Pervasives.open_out/605 call stack = ((At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605))) with false
+Shell: cp almabench.native /tmp/fyp_85401b_almabench
+Shell: chmod 755 /tmp/fyp_85401b_almabench
+Running /tmp/fyp_85401b_almabench
+Shell: make clean
+Shell: scp /tmp/fyp_85401b_almabench 192.168.0.11:/home/fyquah/worker-rundir/0/binary.exe
+echo '()' >overrides.sexp
+rm -rf *.cm* *.native *.o *.data_collector.sexp
+../../../ocaml/ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inlining-overrides overrides.sexp -o almabench.native almabench.ml 2>flambda.out
+Shell: ssh 192.168.0.11 /home/fyquah/worker-rundir/0/benchmark_binary.sh /home/fyquah/worker-rundir/0/binary.exe 10
+Loaded override devisions: 
+=> (((At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605))) ((Pervasives camlPervasives) open_out 605) false)
+=> (((At_call_site ((Pervasives camlPervasives) open_out 605) 0 ((Pervasives camlPervasives) open_out_gen 592)) (At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605))) ((Pervasives camlPervasives) open_out_gen 592) true)
+
+OVERRIDE Applied = Pervasives.open_out/605 call stack = ((At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605))) with false
+Shell: cp almabench.native /tmp/fyp_1b9f07_almabench
+Shell: chmod 755 /tmp/fyp_1b9f07_almabench
+Shell: make clean
+Running /tmp/fyp_1b9f07_almabench
+Shell: scp /tmp/fyp_1b9f07_almabench 192.168.0.12:/home/fyquah/worker-rundir/0/binary.exe
+echo '()' >overrides.sexp
+rm -rf *.cm* *.native *.o *.data_collector.sexp
+../../../ocaml/ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inlining-overrides overrides.sexp -o almabench.native almabench.ml 2>flambda.out
+Shell: ssh 192.168.0.12 /home/fyquah/worker-rundir/0/benchmark_binary.sh /home/fyquah/worker-rundir/0/binary.exe 10
+Loaded override devisions: 
+=> (((At_call_site ((Pervasives camlPervasives) open_out 605) 0 ((Pervasives camlPervasives) open_out_gen 592)) (At_call_site TOP_LEVEL 21 ((Pervasives camlPervasives) open_out 605))) ((Pervasives camlPervasives) open_out_gen 592) true)
+=> (((At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145))) ((Printf camlPrintf) printf 145) false)
+
+OVERRIDE Applied = Printf.printf/145 call stack = ((At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145))) with false
+Shell: cp almabench.native /tmp/fyp_a78bee_almabench
+Shell: chmod 755 /tmp/fyp_a78bee_almabench
+Shell: make clean
+Running /tmp/fyp_a78bee_almabench
+Shell: scp /tmp/fyp_a78bee_almabench 192.168.0.10:/home/fyquah/worker-rundir/0/binary.exe
+echo '()' >overrides.sexp
+rm -rf *.cm* *.native *.o *.data_collector.sexp
+../../../ocaml/ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inlining-overrides overrides.sexp -o almabench.native almabench.ml 2>flambda.out
+Shell: ssh 192.168.0.10 /home/fyquah/worker-rundir/0/benchmark_binary.sh /home/fyquah/worker-rundir/0/binary.exe 10
+Loaded override devisions: 
+=> (((At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145))) ((Printf camlPrintf) printf 145) false)
+=> (((At_call_site ((Printf camlPrintf) printf 145) 0 ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764)) (At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145))) ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764) true)
+
+OVERRIDE Applied = Printf.printf/145 call stack = ((At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145))) with false
+Shell: cp almabench.native /tmp/fyp_4d386b_almabench
+Shell: chmod 755 /tmp/fyp_4d386b_almabench
+Shell: make clean
+echo '()' >overrides.sexp
+rm -rf *.cm* *.native *.o *.data_collector.sexp
+../../../ocaml/ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inlining-overrides overrides.sexp -o almabench.native almabench.ml 2>flambda.out
+Loaded override devisions: 
+=> (((At_call_site ((Printf camlPrintf) printf 145) 0 ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764)) (At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145))) ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764) true)
+=> (((At_call_site TOP_LEVEL 16 ((Almabench camlAlmabench) radecdist 1732))) ((Almabench camlAlmabench) radecdist 1732) true)
+
+OVERRIDE Applied = radecdist/1732 call stack = ((At_call_site TOP_LEVEL 16 ((Almabench camlAlmabench) radecdist 1732))) with true
+OVERRIDE Applied = CamlinternalFormat.make_printf/4764 call stack = ((At_call_site ((Printf camlPrintf) printf 145) 0 ((CamlinternalFormat camlCamlinternalFormat) make_printf 4764)) (At_call_site TOP_LEVEL 18 ((Printf camlPrintf) printf 145))) with true
+Shell: cp almabench.native /tmp/fyp_fa8a09_almabench
+Shell: chmod 755 /tmp/fyp_fa8a09_almabench
