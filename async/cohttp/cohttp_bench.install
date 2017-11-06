@@ -1,0 +1,7 @@
+lib: [
+  "_build/install/default/lib/cohttp_bench/META" {"META"}
+  "_build/install/default/lib/cohttp_bench/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/cohttp_async_bench" {"cohttp_async_bench"}
+]

@@ -1,0 +1,15 @@
+(jbuild_version 1)
+
+(executables
+ ((names (cohttp_async_bench))
+  (preprocess (pps ()))
+  (libraries
+    (core
+     async
+     cohttp.async
+     ))))
+
+(install
+ ((section bin)
+  (files
+    ((cohttp_async_bench.exe as cohttp_async_bench)))))

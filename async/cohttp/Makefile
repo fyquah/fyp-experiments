@@ -1,10 +1,10 @@
 TARGETS= cohttp_lwt_bench.native cohttp_async_bench.native
 
-OCAMLBUILD_OPTS=-use-ocamlfind
+OCAMLBUILD_OPTS=-use-ocamlfind -dflambda
 
 all:
-	ocamlbuild $(OCAMLBUILD_OPTS) $(TARGETS)
+	jbuilder build
 
 .PHONY: clean
 clean:
-	ocamlbuild -clean
+	jbuilder clean

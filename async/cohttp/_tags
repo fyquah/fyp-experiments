@@ -1,3 +1,0 @@
-true: bin_annot, debug
-<*_async_*.*>: thread, package(async), package(cohttp.async)
-<*_lwt_*.*>: thread, package(lwt.unix), package(cohttp.lwt)
