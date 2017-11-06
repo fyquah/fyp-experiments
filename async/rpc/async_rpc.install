@@ -1,0 +1,11 @@
+lib: [
+  "_build/install/default/lib/async_rpc/META" {"META"}
+  "_build/install/default/lib/async_rpc/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/rpc_server" {"rpc_server"}
+  "_build/install/default/bin/rpc_client" {"rpc_client"}
+]
+doc: [
+  "_build/install/default/doc/async_rpc/README"
+]
