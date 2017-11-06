@@ -1,0 +1,16 @@
+(jbuild_version 1)
+
+(executables
+ ((names (rpc_server rpc_client))
+  (preprocess (pps (ppx_jane  ppx_driver.runner)))
+  (libraries
+    (core
+     async
+     ))))
+
+(install
+ ((section bin)
+  (files
+    ((rpc_server.exe as rpc_server)
+     (rpc_client.exe as rpc_client)
+    ))))
