@@ -3,6 +3,11 @@
 (executables
  ((names (cohttp_async_bench))
   (preprocess (pps ()))
+  (ocamlopt_flags
+    ((:standard
+       -inlining-overrides ../../overrides.sexp
+       -inlining-report
+       -inline-max-depth 5)))
   (libraries
     (core
      async
