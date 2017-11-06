@@ -9,4 +9,4 @@ main.native: main.ml
 	  main.ml
 
 clean:
-	rm -f main.o main.cm* main.native main.s
+	rm -f main.o main.cm* main.native main.s a.out

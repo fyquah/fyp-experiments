@@ -1,6 +1,9 @@
 open Core
 open Async
 
+(* This is a simple way to generate a lot of  *)
+let deferred_factorial n =
+
 let run () =
   let i = 0 in
   Deferred.repeat_until_finished i (fun i ->
@@ -11,5 +14,6 @@ let run () =
   >>| fun a -> printf "%d\n" (a + 1)
 
 let () =
+  >>=
   ignore (run ());
   never_returns (Scheduler.go ())
