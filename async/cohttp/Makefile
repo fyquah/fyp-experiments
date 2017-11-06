@@ -6,6 +6,7 @@ OCAMLBUILD_OPTS=-use-ocamlfind -dflambda
 all: cohttp_async_bench.ml
 	jbuilder build
 	cp _build/default/*.data_collector.sexp ./
+	cp _build/default/cohttp_async_bench.exe ./cohttp_async_bench.native
 
 .PHONY: clean
 clean:
