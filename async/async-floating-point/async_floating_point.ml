@@ -112,7 +112,7 @@ let main () =
         `Repeat ({
           M.
           pnl = normalizer state.pnl;
-          iter = 1 + 2;
+          iter = state.iter + 1;
           prev = ticker;
       }))
     end
