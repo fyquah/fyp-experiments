@@ -5,7 +5,7 @@ OCAMLBUILD_OPTS=-use-ocamlfind -dflambda
 .PHONY: all
 all: async_floating_point.ml
 	jbuilder build 2>dflambda.out
-	# cp _build/default/*.data_collector.sexp ./
+	cp _build/default/*.data_collector.sexp ./
 	cp _build/default/async_floating_point.exe ./async_floating_point.native
 	cp _build/default/async_floating_point.s ./
 
