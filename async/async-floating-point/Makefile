@@ -11,6 +11,6 @@ all: async_floating_point.ml
 
 .PHONY: clean
 clean:
-	rm -r _build/
+	rm -rf _build/
 	rm -f *.data_collector.sexp
 	echo '()' >overrides.sexp
