@@ -1,4 +1,4 @@
-all: main.native
+all: b.native
 
 main.native: a.mli a.ml b.ml
 	ocamlopt -O3 -S \
