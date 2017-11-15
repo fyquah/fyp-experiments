@@ -108,6 +108,7 @@ let main () =
       let spread = ticker.ask -. ticker.bid in
       make_normalizer ~fv ~spread
       >>= fun normalizer ->
+      printf "iter = %d\n" state.iter;
       Deferred.return (
         `Repeat ({
           M.
