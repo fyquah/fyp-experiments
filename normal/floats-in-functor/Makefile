@@ -1,6 +1,6 @@
 all: b.native
 
-main.native: a.mli a.ml b.ml
+b.native: a.mli a.ml b.ml
 	ocamlopt -O3 -S \
 	  -dflambda \
 	  -inlining-overrides overrides.sexp \
