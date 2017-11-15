@@ -10,6 +10,6 @@ all: cohttp_async_bench.ml
 
 .PHONY: clean
 clean:
-	jbuilder clean
+	rm -r _build/
 	rm -f *.data_collector.sexp
 	echo '()' >overrides.sexp

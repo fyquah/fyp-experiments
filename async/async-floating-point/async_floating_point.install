@@ -1,0 +1,7 @@
+lib: [
+  "_build/install/default/lib/async_floating_point/META" {"META"}
+  "_build/install/default/lib/async_floating_point/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/async_floating_point" {"async_floating_point"}
+]

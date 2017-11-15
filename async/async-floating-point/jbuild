@@ -1,0 +1,19 @@
+(jbuild_version 1)
+
+(executables
+ ((names (async_floating_point))
+  (preprocess (pps ()))
+  (ocamlopt_flags
+    ((:standard
+       ; -inlining-overrides ../../overrides.sexp
+       -inlining-report
+       -inline-max-depth 5
+       -dflambda
+       -S)))
+  (libraries
+    (core async))))
+
+(install
+ ((section bin)
+  (files
+    ((async_floating_point.exe as async_floating_point)))))
