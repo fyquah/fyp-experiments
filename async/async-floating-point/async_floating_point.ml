@@ -43,7 +43,7 @@ end) = struct
   let init =
     { pnl = 0.0;
       iter = 0;
-      prev = { bid = 0.0; ask = 0.0; volume = 0.0; last = 0.0 };
+      prev = { bid = 4.90; ask = 5.20; volume = 3.0; last = 12.0 };
     }
   ;;
 
@@ -72,7 +72,7 @@ end) = struct
   ;;
 end
 
-let main () =
+let main until =
   let seed = { bid = 0.0; ask = 0.0; volume = 0.0; last = 0.0 } in
   Deferred.return seed
   >>= fun ticker ->
@@ -85,7 +85,7 @@ let main () =
       Deferred.return 1.0 >>= fun a ->
       Deferred.return 2.0 >>= fun b ->
       Deferred.return 3.0 >>| fun c ->
-      bid *. (a +. b +. c) +. ask
+      bid *. (a +. b +. c) +. ask +. 10.0
     ;;
 
   end
@@ -93,11 +93,11 @@ let main () =
   let get_market_variance () = Deferred.return (Random.float 10.0) in
   let make_normalizer ~fv ~spread =
     get_market_variance ()
-    >>| fun var -> (fun x -> x +. (fv *. spread) +. x /. 100.0 *. var)
+    >>| fun var -> (fun x -> (x +. (fv *. spread) +. x /. 100.0 *. var) /. 10000.0)
   in
   let module M = Make_state(T) in
   Deferred.repeat_until_finished M.init (fun state ->
-    if state.iter = 10000
+    if state.iter = until
     then Deferred.return (`Finished ())
     else begin
       stock_ticker state.prev
@@ -108,7 +108,7 @@ let main () =
       let spread = ticker.ask -. ticker.bid in
       make_normalizer ~fv ~spread
       >>= fun normalizer ->
-      printf "iter = %d\n" state.iter;
+      printf "iter = %d pnl = %.3f\n" state.iter state.pnl;
       Deferred.return (
         `Repeat ({
           M.
@@ -118,10 +118,11 @@ let main () =
       }))
     end
   )
+  >>= fun () -> Shutdown.exit 0
 ;;
 
 let () =
   Random.init 1000;  (* Reproduciability *)
-  don't_wait_for (main ());
+  don't_wait_for (main (int_of_string Sys.argv.(1)));
   never_returns @@ Scheduler.go ()
 ;;

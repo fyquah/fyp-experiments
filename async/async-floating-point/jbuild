@@ -6,7 +6,7 @@
   (ocamlopt_flags
     ((:standard
        -O3
-       -inlining-overrides ../../overrides.sexp
+       ; -inlining-overrides ../../overrides.sexp
        -inlining-report
        -inline-max-depth 5
        -dflambda
