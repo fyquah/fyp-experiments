@@ -12,4 +12,4 @@ quicksort.native: quicksort.ml
 
 clean:
 	echo "()" > overrides.sexp
-	-rm code quicksort.cm* quicksort.o quicksort.s *.data_collector.txt
+	-rm code quicksort.cm* quicksort.o quicksort.s *.data_collector.txt quicksort.native

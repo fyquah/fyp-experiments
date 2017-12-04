@@ -4,6 +4,7 @@
 *.cmi
 *.native
 *.data_collector.txt
+*.inlining.org
 a.out
 
 overrides.sexp
