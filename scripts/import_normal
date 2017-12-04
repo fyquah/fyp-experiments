@@ -10,7 +10,7 @@ cp -r "$SRC" "$DEST"
 cp "$SRC/../../micro_bench_types.ml" "$DEST"
 
 ML_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
-MLI_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
+MLI_FILE_NAMES=$(find "$DEST" -name "*.mli"  -execdir echo {} ';' | xargs)
 
 cd $(dirname $0)/..
 cat Makefile.normal.template \
