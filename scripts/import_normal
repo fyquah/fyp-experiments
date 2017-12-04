@@ -4,13 +4,13 @@ set -euo pipefail
 set -x
 
 SRC=../operf-micro/share/operf-micro/benchmarks/$1
-DEST=./normal/$1
+DEST=./normal/$1_benchmark
 
 cp -r "$SRC" "$DEST"
 cp "$SRC/../../micro_bench_types.ml" "$DEST"
 
 set +e
-mv $DEST/benchmark.ml $DEST/$1.ml
+mv $DEST/benchmark.ml $DEST/$1_benchmark.ml
 set -e
 
 ML_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
