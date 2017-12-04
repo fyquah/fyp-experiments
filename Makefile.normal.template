@@ -10,4 +10,4 @@ BINARY_NAME.native: SOURCE_FILES
 
 clean:
 	echo '()' >overrides.sexp
-	rm -rf *.cm* *.native *.o *.data_collector.sexp
+	rm -rf *.cm* *.native *.o *.data_collector.sexp *.inlining.org

@@ -9,6 +9,10 @@ DEST=./normal/$1
 cp -r "$SRC" "$DEST"
 cp "$SRC/../../micro_bench_types.ml" "$DEST"
 
+set +e
+mv $DEST/benchmark.ml $DEST/$1.ml
+set -e
+
 ML_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
 MLI_FILE_NAMES=$(find "$DEST" -name "*.mli"  -execdir echo {} ';' | xargs)
 
