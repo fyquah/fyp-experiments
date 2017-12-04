@@ -18,7 +18,7 @@ MLI_FILE_NAMES=$(find "$DEST" -name "*.mli"  -execdir echo {} ';' | xargs)
 
 cd $(dirname $0)/..
 cat Makefile.normal.template \
-  | sed -e "s/BINARY_NAME/$1/" -e  "s/SOURCE_FILES/$MLI_FILE_NAMES $ML_FILE_NAMES/" \
+  | sed -e "s/BINARY_NAME/$1_benchmark/" -e  "s/SOURCE_FILES/$MLI_FILE_NAMES $ML_FILE_NAMES/" \
   >"$DEST"/Makefile
 
 echo "You might need to reorder the files in the generated directory"
