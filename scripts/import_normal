@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -euo pipefail
+set -x
+
+SRC=../operf-micro/share/operf-micro/benchmarks/$1
+DEST=./normal/$1
+
+cp -r "$SRC" "$DEST"
+
+ML_FILE_NAMES=$(find "$SRC" -name "*.ml"  -execdir echo {} ';' | xargs)
+
+cd $(dirname $0)/..
+cat Makefile.normal.template \
+  | sed -e "s/BINARY_NAME/$1/" -e  "s/SOURCE_FILES/$ML_FILE_NAMES/" \
+  >"$DEST"/Makefile
+
