@@ -1,6 +1,10 @@
 *.cmx
 *.o
+*.s
 *.cmi
 *.native
-a.out
 *.data_collector.txt
+a.out
+
+overrides.sexp
+flambda.out

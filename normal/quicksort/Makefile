@@ -1,16 +1,15 @@
-CREATE_LLVM_PROF=../../../autofdo/_install/bin/create_llvm_prof
-LLVM_PROFDATA=llvm-profdata-5.0
-OCAMLOPT=../../../ocaml/ocamlopt
+all: quicksort.native
 
-.PHONY: all report
+ifneq (,$(findstring fyp,$(shell which ocamlopt)))
+	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+endif
 
-all: report
-
-code: quicksort.ml
-	$(OCAMLOPT) -O3 -inlining-report -g -S $< -o $@
-
-report: code
-	./$< >/dev/null
+quicksort.native: quicksort.ml
+	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
+	  $(ADDITIONAL_OCAML_FLAGS) \
+	  -O3 -S -o $@ $^ \
+	  2>flambda.out
 
 clean:
-	rm code quicksort.cm* quicksort.o quicksort.s *.data_collector.txt
+	echo "()" > overrides.sexp
+	-rm code quicksort.cm* quicksort.o quicksort.s *.data_collector.txt
