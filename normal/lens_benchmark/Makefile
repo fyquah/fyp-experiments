@@ -4,7 +4,7 @@ ifneq (,$(findstring fyp,$(shell which ocamlopt)))
 	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
-lens.native: lens.mli micro_bench_types.ml lens.ml lens_benchmark.ml
+lens_benchmark.native: lens.mli micro_bench_types.ml lens.ml lens_benchmark.ml
 	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
