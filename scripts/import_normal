@@ -7,11 +7,15 @@ SRC=../operf-micro/share/operf-micro/benchmarks/$1
 DEST=./normal/$1
 
 cp -r "$SRC" "$DEST"
+cp "$SRC/../../micro_bench_types.ml" "$DEST"
 
-ML_FILE_NAMES=$(find "$SRC" -name "*.ml"  -execdir echo {} ';' | xargs)
+ML_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
+MLI_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
 
 cd $(dirname $0)/..
 cat Makefile.normal.template \
-  | sed -e "s/BINARY_NAME/$1/" -e  "s/SOURCE_FILES/$ML_FILE_NAMES/" \
+  | sed -e "s/BINARY_NAME/$1/" -e  "s/SOURCE_FILES/$MLI_FILE_NAMES $ML_FILE_NAMES/" \
   >"$DEST"/Makefile
 
+echo "You might need to reorder the files in the generated directory"
+echo "  cd $DEST; make all; "
