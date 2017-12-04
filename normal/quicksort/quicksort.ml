@@ -73,9 +73,15 @@ let test_sort sort_fun size =
 
 
 let main () =
-  for i = 1 to 100 do
+  for i = 1 to 1000 do
     test_sort qsort 50000;
     test_sort qsort2 50000
   done
 
-let _ = main(); exit 0
+let _ =
+  main();
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
