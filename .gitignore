@@ -3,3 +3,4 @@
 *.cmi
 *.native
 a.out
+*.data_collector.txt
