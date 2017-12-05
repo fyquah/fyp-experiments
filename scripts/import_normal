@@ -11,9 +11,15 @@ cp -r "$SRC" "$DEST"
 ML_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
 MLI_FILE_NAMES=$(find "$DEST" -name "*.mli"  -execdir echo {} ';' | xargs)
 
+if [ -n "$MLI_FILE_NAMES" ]; then
+  SOURCE_FILES="$MLI_FILE_NAMES $ML_FILE_NAMES"
+else
+  SOURCE_FILES="$ML_FILE_NAMES"
+fi
+
 cd $(dirname $0)/..
 cat Makefile.normal.template \
-  | sed -e "s/BINARY_NAME/$1_benchmark/" -e  "s/SOURCE_FILES/$MLI_FILE_NAMES $ML_FILE_NAMES/" \
+  | sed -e "s/BINARY_NAME/$1_benchmark/" -e  "s/SOURCE_FILES/$SOURCE_FILES/" \
   >"$DEST"/Makefile
 
 echo "You might need to reorder the files in the generated directory"
