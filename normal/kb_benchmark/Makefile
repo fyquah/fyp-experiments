@@ -1,10 +1,10 @@
-all: kb_benchmark.native
+all: kb.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
 ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
-kb_benchmark.native: kb.ml
+kb.native: kb.ml
 	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
