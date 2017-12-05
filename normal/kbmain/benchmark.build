@@ -1,2 +1,0 @@
-{ files: ["result.ml", "terms.mli", "terms.ml", "equations.mli", "equations.ml",
-          "orderings.mli", "orderings.ml", "kb.mli", "kb.ml", "kbmain.ml"] }
