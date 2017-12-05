@@ -583,7 +583,11 @@ let greater pair =
   match group_order pair with Greater -> true | _ -> false
 
 let _ =
-  for i = 1 to 20 do kb_complete greater [] geom_rules done
+  let n =
+    if Array.length Sys.argv >= 2 then int_of_string Sys.argv.(1) else 20 in
+  for i = 1 to n do
+    kb_complete greater [] geom_rules
+  done
 
 let () =
   try

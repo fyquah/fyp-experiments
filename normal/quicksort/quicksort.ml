@@ -73,7 +73,10 @@ let test_sort sort_fun size =
 
 
 let main () =
-  for i = 1 to 1000 do
+  let n =
+    if Array.length Sys.argv >= 2 then int_of_string Sys.argv.(1) else 1000
+  in
+  for i = 1 to n do
     test_sort qsort 50000;
     test_sort qsort2 50000
   done
