@@ -1,9 +1,12 @@
 all: almabench.native
 
+ifneq (,$(findstring fyp,$(shell which ocamlopt)))
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+endif
+
 almabench.native: almabench.ml
 	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
-	  -inlining-overrides overrides.sexp \
-	  -O3 -S -o $@ $^ \
+	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ \
 	  2>flambda.out
 
 clean:
