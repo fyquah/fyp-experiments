@@ -1,0 +1,20 @@
+#!/bin/bash
+
+files=$(ls normal)
+BASE_DIR=$(realpath $(dirname $0)/../normal/)
+
+export OPAMROOT=$HOME/fyp/opam-root
+opam switch 4.05.0+fyp
+eval `opam config env`
+which ocamlopt
+
+set -euo pipefail
+
+for d in $files; do
+  cd "$BASE_DIR/$d"
+  make clean
+  make all
+  make clean
+done
+
+echo "All tests passed!"
