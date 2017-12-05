@@ -1,7 +1,7 @@
 all: kbmain.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 kbmain.native: terms.mli orderings.mli equations.mli kb.mli result.ml terms.ml equations.ml orderings.ml  micro_bench_types.ml kb.ml kbmain.ml

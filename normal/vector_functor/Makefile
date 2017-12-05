@@ -1,7 +1,7 @@
 all: benchmark.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 benchmark.native: micro_bench_types.ml vect_abstr.ml vect_instantiation.ml benchmark.ml

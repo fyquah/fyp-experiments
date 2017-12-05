@@ -1,7 +1,7 @@
 all: fft.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 fft.native:  micro_bench_types.ml fft.ml 

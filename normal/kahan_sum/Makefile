@@ -1,7 +1,7 @@
 all: kahan_sum.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 kahan_sum.native: micro_bench_types.ml kahan_sum.mli kahan_sum.ml main.ml

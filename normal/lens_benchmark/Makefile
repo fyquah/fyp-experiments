@@ -1,7 +1,7 @@
-all: lens.native
+all: lens_benchmark.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 lens_benchmark.native: lens.mli micro_bench_types.ml lens.ml lens_benchmark.ml

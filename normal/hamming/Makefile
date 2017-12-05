@@ -1,7 +1,7 @@
 all: hamming.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 hamming.native:  micro_bench_types.ml result.ml hamming.ml

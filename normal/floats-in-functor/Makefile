@@ -1,12 +1,12 @@
 all: b.native
 
+ifneq (,$(findstring fyp,$(shell which ocamlopt)))
+ADDITIONAL_OCAML_FLAGS+=-inlining-overrides overrides.sexp
+endif
+
 b.native: a.mli a.ml b.ml
-	ocamlopt -O3 -S \
-	  -dflambda \
-	  -inlining-overrides overrides.sexp \
-	  -inline-max-depth 5 \
-	  -inlining-report \
-	  -o $@ $^ 2>flambda.out
+	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
+	  ${ADDITIONAL_OCAML_FLAGS} -O3 -S -o $@ $^ 2>flambda.out
 
 clean:
 	echo '()' >overrides.sexp

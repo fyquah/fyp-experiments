@@ -1,7 +1,7 @@
 all: sieve_benchmark.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 sieve_benchmark.native:  result.ml micro_bench_types.ml sieve.ml

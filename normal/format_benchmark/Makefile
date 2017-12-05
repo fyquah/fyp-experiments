@@ -1,7 +1,7 @@
 all: format_benchmark.native
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-	ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 format_benchmark.native:  micro_bench_types.ml format_benchmark.ml

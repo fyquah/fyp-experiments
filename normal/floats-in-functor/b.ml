@@ -19,13 +19,13 @@ let () =
     let identity = 200.0
 
     let ( + ) a b =
-      (float_modulo (a +. b) gf * 3.0)
-      +. float_modulo ( a /. (b +. 0.01) *. 412.12)
+      (float_modulo (a +. b) gf *. 3.0)
+      +. float_modulo ( a /. (b +. 0.01) *. 412.12) gf
     ;;
 
     let ( * ) a b =
       float_modulo (a *. b) gf
-      +. float_modulo ( a /. (b +. 0.01) *. 412.12)
+      +. float_modulo ( a /. (b +. 0.01) *. 412.12) gf
     ;;
   end
   in

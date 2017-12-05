@@ -11,10 +11,11 @@ which ocamlopt
 set -euo pipefail
 
 for d in $files; do
+  echo "Testing $d ...."
   cd "$BASE_DIR/$d"
-  make clean
-  make all
-  make clean
+  make clean >/dev/null
+  make all >/dev/null
+  make clean >/dev/null
 done
 
 echo "All tests passed!"
