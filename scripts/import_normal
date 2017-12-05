@@ -8,8 +8,9 @@ DEST=./normal/$1_benchmark
 
 cp -r "$SRC" "$DEST"
 
-ML_FILE_NAMES=$(find "$DEST" -name "*.ml"  -execdir echo {} ';' | xargs)
-MLI_FILE_NAMES=$(find "$DEST" -name "*.mli"  -execdir echo {} ';' | xargs)
+
+ML_FILE_NAMES=$(find "$DEST" -name "*.ml" -exec basename \{} \; | xargs)
+MLI_FILE_NAMES=$(find "$DEST" -name "*.mli" -exec basename \{} \; | xargs)
 
 if [ -n "$MLI_FILE_NAMES" ]; then
   SOURCE_FILES="$MLI_FILE_NAMES $ML_FILE_NAMES"
