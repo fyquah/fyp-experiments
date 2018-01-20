@@ -1,5 +1,12 @@
 *.cmx
 *.o
+*.s
 *.cmi
 *.native
+*.data_collector.txt
+*.data_collector.sexp
+*.inlining.org
 a.out
+
+overrides.sexp
+flambda.out
