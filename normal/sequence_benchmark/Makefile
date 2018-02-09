@@ -2,7 +2,7 @@ all: sequence_benchmark.native
 deps: sequence.cmx
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt)))
-ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp -exhaustive-inlining
+ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 sequence_benchmark.native: sequence.ml sequence_benchmark.ml
