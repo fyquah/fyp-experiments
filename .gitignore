@@ -5,6 +5,8 @@
 *.native
 *.data_collector.txt
 *.data_collector.sexp
+*.data_collector.v0.sexp
+*.data_collector.v1.sexp
 *.inlining.org
 a.out
 
