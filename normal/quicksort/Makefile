@@ -5,8 +5,8 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 quicksort.native: quicksort.ml
-	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
-	  $(ADDITIONAL_OCAML_FLAGS) \
+	ocamlopt -dflambda -inline-max-depth 5 -inline-max-roll 5 -g \
+	  -inlining-report $(ADDITIONAL_OCAML_FLAGS) \
 	  -O3 -S -o $@ $^ \
 	  2>flambda.out
 

@@ -5,7 +5,7 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 kb.native: kb.ml
-	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
+	ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inline-max-roll 5 -g \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:
