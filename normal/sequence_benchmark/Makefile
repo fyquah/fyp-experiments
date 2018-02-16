@@ -6,7 +6,7 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 sequence_benchmark.native: sequence.ml sequence_benchmark.ml
-	ocamlopt -dflambda -inline-max-depth 10 -inline-max-unroll 10 -g -inlining-report \
+	ocamlopt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -g -inlining-report \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:
