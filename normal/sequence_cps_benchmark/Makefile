@@ -5,7 +5,7 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 sequence_cps_benchmark.native: sequence_cps.ml sequence_cps_benchmark.ml
-	ocamlopt -dflambda -inline-max-depth 5 -inlining-report -g -inline-max-roll 5 \
+	ocamlopt -dflambda -inline-max-depth 5 -inlining-report -g -inline-max-unroll 5 \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:

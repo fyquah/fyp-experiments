@@ -5,7 +5,7 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 main.native: date.mli optimization.mli math.mli g2pp_calibration.mli  date.ml math.ml  optimization.ml g2pp_calibration.ml main.ml
-	ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inline-max-roll 5 -g \
+	ocamlopt -dflambda -inline-max-depth 5 -inlining-report -inline-max-unroll 5 -g \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:
