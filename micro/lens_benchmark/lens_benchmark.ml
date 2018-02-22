@@ -59,7 +59,7 @@ let () =
   let n = int_of_string Sys.argv.(1) in
   let area = ref 0 in
   for i = 0 to n - 1 do
-    area := !area + lens_rect_area (prepare i)
+    area := (!area + lens_rect_area (prepare i)) mod (1 lsl 13)
   done;
   Printf.printf "area = %d\n" !area
 ;;
