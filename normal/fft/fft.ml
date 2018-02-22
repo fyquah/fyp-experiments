@@ -178,19 +178,16 @@ let test np =
   done;
   !zr, !zi
 
-open Micro_bench_types
+let run i =
+  let res = (test (1 lsl i)) in
+  Printf.printf "%d %.3f %.3f" i (fst res) (snd res)
+;;
 
-let run i = test (1 lsl i)
-let check i (zr, zi) =
-  if (abs_float zr <= 1e-8 && abs_float zi <= 1e-8)
-  then Ok
-  else Error ("n: " ^ string_of_int (1 lsl i)
-              ^ " zr: " ^ string_of_float zr
-              ^ " zi: " ^ string_of_float zi)
-let prepare i = i
-let range = [Range (4, 22), Short]
 
-let functions =
-  [ "fft", Int(run, prepare, check, range) ]
-
-let () = add functions
+let () =
+  run (int_of_string Sys.argv.(1));
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
