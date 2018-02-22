@@ -54,18 +54,19 @@ let check_rect_area n res =
   then Ok
   else Error "rect_area"
 
-let range = [ Any, Short ]
 
-let rect_area_group =
-  Int_group
-    (["lens", lens_rect_area;
-      "baseline", direct_rect_area],
-     prepare,
-     check_rect_area,
-     range)
+let () =
+  let n = int_of_string Sys.argv.(1) in
+  let area = ref 0 in
+  for i = 0 to n - 1 do
+    area := !area + lens_rect_area (prepare i)
+  done;
+  Printf.printf "area = %d\n" !area
+;;
 
-let functions =
-  [ "rect_area", rect_area_group;
-  ]
-
-let () = add functions
+let () =
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
