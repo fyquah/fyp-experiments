@@ -115,8 +115,6 @@ let run i =
   ignore (skip h i);
   skip h i
 
-let check_i _ _ = Ok (* we do not check for arbitrary parameter *)
-
 let check_string l =
   let b = Buffer.create 1000 in
   let ppf = Format.formatter_of_buffer b in
@@ -124,33 +122,12 @@ let check_string l =
   Format.fprintf ppf "@.";
   Buffer.contents b
 
-let check l =
-  let s = check_string l in
-  if s = Result.result
-  then Ok
-  else Error s
-
-let prepare i = i
-
-let range =
-  [ Range (10, 10_000), Short ]
-
-let n = 20_000
-
-let functions =
-  [ "hamming var", Int (run, prepare, check_i, range);
-    "hamming_test", Unit ((fun () -> run n), check, Short) ]
-
-let () = add functions
-
-let save_result () =
-  let s = check_string (run n) in
-  let oc = open_out "result.ml" in
-  output_string oc "let result =\n\"";
-  output_string oc s;
-  output_string oc "\"";
-  close_out oc
 
 let () =
-  if Array.length Sys.argv > 1 && Sys.argv.(1) = "make-result"
-  then save_result ()
+  let n = int_of_string Sys.argv.(1) in
+  Printf.printf "%s" (check_string (run n));
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
