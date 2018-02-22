@@ -44,45 +44,9 @@ let sieve max =
 
 (**** check and register ****)
 
-open Micro_bench_types
-
-let range =
-  [ Range (10, 100_000), Short ]
-
-let n = 50_000
-
-let do_not_check _ (_:int list) = Ok
-
-let check_string l =
-  let b = Buffer.create 1000 in
-  let ppf = Format.formatter_of_buffer b in
-  List.iter (fun i -> Format.fprintf ppf "%i;\n" i) l;
-  Format.fprintf ppf "@.";
-  Buffer.contents b
-
-let check l =
-  if l = Result.result
-  then Ok
-  else Error ""
-
-let prepare i = i
-
 let run i = sieve i
 
-let functions =
-  [ "Eratosthene", Int (run, prepare, do_not_check, range);
-    "Eratosthene_test", Unit ((fun () -> run n), check, Short); ]
-
-let () = add functions
-
-let save_result () =
-  let s = check_string (run n) in
-  let oc = open_out "result.ml" in
-  output_string oc "let result =\n[";
-  output_string oc s;
-  output_string oc "]";
-  close_out oc
-
 let () =
-  if Array.length Sys.argv > 1 && Sys.argv.(1) = "make-result"
-  then save_result ()
+  let n = int_of_string Sys.argv.(1) in
+  let d = List.fold_left (fun a b -> a lxor b) 0 (run n) in
+  Printf.printf "%d" n

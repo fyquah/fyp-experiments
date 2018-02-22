@@ -5,7 +5,7 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 sieve_benchmark.native:  result.ml micro_bench_types.ml sieve.ml
-	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
+	ocamlopt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:
