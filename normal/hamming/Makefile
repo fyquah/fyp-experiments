@@ -5,7 +5,7 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 hamming.native:  micro_bench_types.ml result.ml hamming.ml
-	ocamlopt -dflambda -inline-max-depth 20 -inline-max-unroll 20 -inlining-report \
+	ocamlopt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:
