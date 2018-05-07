@@ -670,3 +670,10 @@ let () =
   print_int_native (avg (fold_res.rating));
   ()
 ;;
+
+let () =
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
