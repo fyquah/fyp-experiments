@@ -1,10 +1,10 @@
-OCAMLOPT=$(HOME)/fyp/ocaml/ocamlopt
+OCAMLOPT=$(HOME)/fyp/ocaml/ocamlopt.opt
 OCAMLFIND=/home/fyquah/.opam/4.05.0+fyp/bin/ocamlfind
 
 all: main.native
 
 main.native: main.ml
-	$(OCAMLFIND) ocamlopt -package async \
+	$(OCAMLFIND) ocamlopt.opt -package async \
 	  -linkpkg -thread -S \
 	  main.ml
 

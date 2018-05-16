@@ -1,11 +1,11 @@
 all: format_benchmark.native
 
-ifneq (,$(findstring fyp,$(shell which ocamlopt)))
+ifneq (,$(findstring fyp,$(shell which ocamlopt.opt)))
 ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 format_benchmark.native:  micro_bench_types.ml format_benchmark.ml
-	ocamlopt -dflambda -inline-max-depth 5 -inlining-report \
+	ocamlopt.opt -dflambda -inline-max-depth 5 -inlining-report \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:

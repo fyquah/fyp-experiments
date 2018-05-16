@@ -5,7 +5,7 @@ all: perf.data
 run: perf.data
 
 code: quicksort.ml
-	ocamlopt -g -S $< -o $@
+	ocamlopt.opt -g -S $< -o $@
 
 perf.data: code
 	perf record --call-graph=dwarf -a --output=$@ -b -- \
