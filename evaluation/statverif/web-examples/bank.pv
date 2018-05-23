@@ -1,0 +1,71 @@
+(* Example file for StatVerif version 1.97.
+   Available from https://sec.cs.bham.ac.uk/StatVerif 
+   August 2017 *)
+
+(* A simple banking app. *)
+
+type key.
+
+fun sign(key,bitstring):bitstring.
+fun pk(key):key.
+
+fun aenc(key,channel):bitstring.
+
+free c:channel.
+
+event balance_sent(channel).
+event authenticated(channel).
+
+free init_ch:channel[private].
+
+reduc forall k:key,m:bitstring; checksign(pk(k),sign(k,m)) = m.
+reduc forall k:key,xch:channel; adec(k,aenc(pk(k),xch)) = xch.
+
+query ch:channel ; event(balance_sent(ch)) ==> event(authenticated(ch)).
+
+cell state_ch:channel.
+cell state_ch_authenticated := false.
+
+let SendBalance(balance:bitstring) =
+   read state_ch,state_ch_authenticated as ch,ch_authenticated;
+   if ch_authenticated then
+       event balance_sent(ch);
+       out(ch, balance).
+
+let ReceiveNewChannel(bankKey:key) =
+   in(c, xch:bitstring);
+   state_ch,state_ch_authenticated := adec(bankKey,xch),false.
+
+let Signer(signKey:key,pkBankKey:key) =
+    new ch:channel;
+    out (c, aenc(pkBankKey,ch));
+    in(ch,n:bitstring);
+    out(ch,sign(signKey,n)).
+
+let Authenticator(pkSignKey:key) =
+    lock(state_ch,state_ch_authenticated);
+    read state_ch,state_ch_authenticated as ch,ch_authenticated;
+    if ch_authenticated = false then
+    (new n:bitstring;
+    out (ch,n);
+    in(ch,xs:bitstring);
+    if checksign(pkSignKey,xs) = n then
+	 event authenticated(ch);
+         state_ch:= ch;
+         state_ch_authenticated := true;
+	 unlock(state_ch,state_ch_authenticated)
+    else unlock(state_ch,state_ch_authenticated))
+    else unlock(state_ch,state_ch_authenticated).
+
+
+process
+  new balance:bitstring;
+  new signKey:key;
+  out (c, pk(signKey));
+  new bankKey:key;
+  out (c, pk(bankKey));
+  (!(SendBalance(balance)) | !ReceiveNewChannel(bankKey) | !Signer(signKey,pk(bankKey)) | !Authenticator(pk(signKey)))
+       
+    
+
+

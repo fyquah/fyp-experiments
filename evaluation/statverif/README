@@ -1,0 +1,74 @@
+Protocol verifier, copyright INRIA-CNRS, by Bruno Blanchet,
+Vincent Cheval, and Marc Sylvestre 2000-2017.
+StatVerif additions copyright University of Birmingham, Eike Ritter,
+Mark Ryan and Joshua Philips 2013-2017.
+
+This software can be used to prove secrecy and authenticity properties
+of cryptographic protocols.
+
+INSTALL
+
+* from packages
+
+To run this software, you need Objective Caml version 3.00 or
+higher. For installation instructions see
+http://ocaml.org/docs/install.html.
+
+Binary packages are provided for Ubuntu 16.04 and Fedora 26. StatVerif
+is also available via opam as package statverif. 
+
+* from source code
+
+On Mac OS X, you need to install XCode if you do not
+already have it. It can be downloaded from
+	https://developer.apple.com/xcode/
+
+
+* under Unix / Mac
+
+The source is available on github. Building it requires ocaml,
+ocamlbuild and ocamlfind which should be available from the same place
+as ocaml. Download the source with
+
+git clone https://github.com/rittere/statverif.git
+
+Then cd into the directory statverif-1.97 and type
+
+make
+sudo make install
+
+This will create a binary called statverif and place it in /usr/local/bin.
+
+* under Windows
+
+The best way to run statverif under Windows is to use the package
+provided in opam. 
+
+
+
+USAGE
+
+This software contains two executable programs, statverif and statveriftotex. 
+
+The program statverif takes as input a description of a cryptographic
+protocol possibly with state, and checks whether it satisfies secrecy, authenticity, or
+equivalence properties. The description of the protocol can have
+several different formats. The recommended format is the typed pi
+calculus format, which is a dialect of the applied pi calculus (Abadi
+and Fournet, POPL'01).  The description of the protocol is first
+translated into Horn clauses, then the core of the verifier is called.
+Examples of protocol descriptions can be found in the webexamples subdirectory.
+To run these examples, use 
+        statverif <filename>
+	
+The program statveriftotex takes as input a protocol description
+and converts it into a LaTeX file. This is useful for including
+protocols in research papers.
+
+
+COPYRIGHT
+
+This software is distributed under the GNU general public license.
+See the file LICENSE for more information.
+
+

@@ -1,0 +1,13 @@
+statverif (1.97pl1.1) UNRELEASED; urgency=medium
+
+  * Bugfixes.
+  * 
+  * 
+
+ -- Eike Ritter <ubuntu@rittere.co.uk>  Thu, 23 Nov 2017 21:26:20 +0000
+
+statverif (1.97-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Eike Ritter <E.Ritter@cs.bham.ac.uk>  Fri, 28 Jul 2017 09:41:16 +0100
