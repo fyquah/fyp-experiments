@@ -33,3 +33,11 @@ let () =
   QCheck_runner.set_seed 100;
   ignore (OUnit.run_test_tt suite);
   QCheck_runner.run_tests_main props
+
+let () =
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
+
