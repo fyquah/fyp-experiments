@@ -6,10 +6,10 @@ OPTOBJS = $(SOURCES:.ml=.cmx)
 .SUFFIXES: .ml .cmx
 
 all: $(OPTOBJS)
-	ocamlfind ocamlopt -linkpkg $(OPTIONS) $(PACKAGES) $(OPTOBJS) -o rpc_server.native
+	ocamlfind ocamlopt.opt -linkpkg $(OPTIONS) $(PACKAGES) $(OPTOBJS) -o rpc_server.native
 
 .ml.cmx:
-	ocamlfind ocamlopt $(OPTIONS) $(PACKAGES) -c $<
+	ocamlfind ocamlopt.opt $(OPTIONS) $(PACKAGES) -c $<
 
 
 .PHONY: clean

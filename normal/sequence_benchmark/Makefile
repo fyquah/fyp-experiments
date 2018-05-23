@@ -1,12 +1,12 @@
 all: sequence_benchmark.native
 deps: sequence.cmx
 
-ifneq (,$(findstring fyp,$(shell which ocamlopt)))
+ifneq (,$(findstring fyp,$(shell which ocamlopt.opt)))
 ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 sequence_benchmark.native: sequence.ml sequence_benchmark.ml
-	ocamlopt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -g -inlining-report \
+	ocamlopt.opt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -g -inlining-report \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
 
 clean:
