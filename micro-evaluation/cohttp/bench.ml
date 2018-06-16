@@ -14,7 +14,7 @@ let main n p =
       | n ->
           Client.(get @@ Uri.of_string @@ "http://127.0.0.1:" ^ string_of_int p)
           >>= fun (_, body) ->
-          Cohttp_lwt_body.drain_body body >>= fun () ->
+          Cohttp_lwt.Body.drain_body body >>= fun () ->
           inner (pred n)
     in inner n
   in
