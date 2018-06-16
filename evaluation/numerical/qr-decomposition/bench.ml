@@ -336,3 +336,12 @@ let main () =
   (* print_mat "Q" q; *)
   (* print_mat "R" r; *)
   (* print_mat "Q * R" *) (gemm q r)
+
+let () =
+  let _ = main () in
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
+;;

@@ -65,3 +65,12 @@ let main () =
   ignore (print_ar_coeffs "Sound /u/" Dataset.u order);
   ignore (print_ar_coeffs "Sound /e/" Dataset.e order);
   ignore (print_ar_coeffs "Sound /o/" Dataset.o order)
+
+let () =
+  let _ = main () in
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
+;;

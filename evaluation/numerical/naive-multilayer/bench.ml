@@ -244,3 +244,12 @@ let main samples =
   done
 
 let main () = main Dataset.samples
+
+let () =
+  let _ = main () in
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
+;;
