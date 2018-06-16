@@ -1,0 +1,8 @@
+durand-kerner-aberth/
+k-means/
+levinson-durbin/
+lu-decomposition/
+naive-multilayer/
+qr-decomposition/
+rnd_access/
+simple_access/
