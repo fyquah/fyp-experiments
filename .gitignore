@@ -1,7 +1,8 @@
 *.cmx
 *.o
 *.s
-*.cmi
+**.cmi
+**.cmt
 *.native
 *.data_collector.txt
 *.data_collector.sexp
