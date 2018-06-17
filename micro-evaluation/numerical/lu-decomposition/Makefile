@@ -5,7 +5,7 @@ ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
 endif
 
 bench.native: bench.ml
-	ocamlopt.opt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report -g $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
+	ocamlopt.opt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report -g $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 1>stdout.log 2>flambda.out
 
 clean:
 	echo '()' >overrides.sexp

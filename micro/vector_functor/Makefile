@@ -6,7 +6,7 @@ endif
 
 benchmark.native: micro_bench_types.ml vect_abstr.ml vect_instantiation.ml benchmark.ml
 	ocamlopt.opt -dflambda -inline-max-depth 5 -inlining-report \
-	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
+	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 1>stdout.log 2>flambda.out
 
 clean:
 	echo '()' >overrides.sexp

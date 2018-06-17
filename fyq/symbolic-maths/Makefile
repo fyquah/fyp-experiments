@@ -6,11 +6,11 @@ endif
 
 main_oclassic.native: main.ml print.c
 	ocamlopt.opt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report -g \
-	  $(ADDITIONAL_OCAML_FLAGS) -Oclassic -S -o $@ $^ 2>flambda.out
+	  $(ADDITIONAL_OCAML_FLAGS) -Oclassic -S -o $@ $^ 1>stdout.log 2>flambda.out
 
 main.native: main.ml print.c
 	ocamlopt.opt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report -g \
-	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
+	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 1>stdout.log 2>flambda.out
 
 clean:
 	echo '()' >overrides.sexp

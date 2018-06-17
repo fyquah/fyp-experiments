@@ -7,7 +7,7 @@ endif
 bench.native: valet_core.ml valet_react.ml test_lib.ml bench.ml 
 	ocamlfind ocamlopt -bin-annot -thread \
 	  -package react,lwt,uuidm,ocplib-endian,unix,unix,lwt.unix \
-	  -linkpkg -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report -g $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 2>flambda.out
+	  -linkpkg -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report -g $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ 1>stdout.log 2>flambda.out
 
 clean:
 	echo '()' >overrides.sexp

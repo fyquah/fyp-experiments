@@ -7,7 +7,7 @@ endif
 almabench.native: almabench.ml
 	ocamlopt.opt -dflambda -inline-max-depth 5 -inline-max-unroll 5 -inlining-report -g \
 	  $(ADDITIONAL_OCAML_FLAGS) -O3 -S -o $@ $^ \
-	  2>flambda.out
+	  1>stdout.log 2>flambda.out
 
 clean:
 	echo '()' >overrides.sexp
