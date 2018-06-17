@@ -56,7 +56,7 @@ let main n =
     | Some fn -> Out_channel.with_file fn ~f:(fun oc -> Gc.print_stat oc)
     | _ -> ()
   with _ -> ());
-  Shutdown.exit 1
+  Shutdown.exit 0
 
 
 let () =
