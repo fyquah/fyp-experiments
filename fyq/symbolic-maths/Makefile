@@ -1,4 +1,4 @@
-all: main_oclassic.native main.native 
+all: main.native 
 
 ifneq (,$(findstring fyp,$(shell which ocamlopt.opt)))
 ADDITIONAL_OCAML_FLAGS=-inlining-overrides overrides.sexp
