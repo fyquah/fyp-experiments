@@ -3219,16 +3219,19 @@ sol_most_distant_atom s = maximum (List.map var_most_distant_atom s)
 let
 most_distant_atom sols = maximum (List.map sol_most_distant_atom sols)
 
-let run () = most_distant_atom (pseudoknot ())
+let run () =
+  Random.init 100;
+  for i = 1 to int_of_string Sys.argv.(1) do
+    let x = most_distant_atom (pseudoknot ()) in
+    if Random.float 1.0 > 0.90 then
+      Format.printf "%d -> %.3f\n" i x
+  done
+;;
 
-open Micro_bench_types
-
-let check v =
-  if abs_float (v -. 33.7976) <= 0.0001
-  then Ok
-  else Error (string_of_float v)
-
-let functions =
-  [ "nucleic", Unit (run, check, Short) ]
-
-let () = add functions
+let () =
+  let _ = run () in
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()

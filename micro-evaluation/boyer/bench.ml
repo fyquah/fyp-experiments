@@ -881,15 +881,17 @@ let term = cterm_to_term(
               CProp ("implies",[CVar 23; CVar 22])]))
 
 
-open Micro_bench_types
+let run () =
+  for i = 1 to int_of_string Sys.argv.(1) do
+    let _ = tautp (apply_subst subst term) in
+    ()
+  done
 
-let run () = tautp (apply_subst subst term)
-let check b =
-  if b
-  then Ok
-  else Error "Cannot prove"
-
-let functions =
-  [ "boyer", Unit (run, check, Long) ]
-
-let () = add functions
+let () =
+  let _ = run () in
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
+;;
