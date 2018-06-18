@@ -143,18 +143,6 @@ let prepare_random_array density size =
   copy_prepared_option_array
     (prepare_random_option_array density size)
 
-let sum density =
-  Printf.sprintf "sum %0.2f" density,
-  Int_group (
-    [
-      OA.sum_bench;
-      NAC.sum_bench;
-      NAM.sum_bench;
-    ],
-       prepare_random_array density,
-       check_sum_option_array density,
-       [Range (100, 100000), Short])
-
 let check_walk density size res =
   let oa = prepare_random_path density size in
   let length = OA.walk oa in
@@ -167,25 +155,50 @@ let prepare_walk density size =
   copy_prepared_option_array
     (prepare_random_path density size)
 
-let walk density =
-  Printf.sprintf "walk %0.2f" density,
-  Int_group (
-    [
+let walk n density =
+  let arr = prepare_walk density n in
+  let fns =
+    List.map snd [
       OA.walk_bench;
       OA.walk_k_bench;
       NAC.walk_bench;
       NAC.walk_k_bench;
       NAM.walk_bench;
       NAM.walk_k_bench;
-    ],
-       prepare_walk density,
-       check_walk density,
-       [Range (100, 100000), Short])
+    ]
+  in
+  List.fold_left (fun b f -> b + f arr) 0 fns
+;;
 
-let functions =
-  let densities = [1.; 0.3; 0.01] in
-  List.map sum densities @
-  List.map walk densities
+let sum n density =
+  let arr = prepare_walk density n in
+  let fns =
+    List.map snd [
+      OA.sum_bench;
+      NAC.sum_bench;
+      NAM.sum_bench;
+    ]
+  in
+  List.fold_left (fun b f -> b + f arr) 0 fns
+;;
 
 
-let () = add functions
+let () =
+  let n = int_of_string Sys.argv.(1) in
+  let densities = [ 0.05; 0.3; 0.7; 1.0 ] in
+  let r = 
+     List.fold_left
+       (fun b d -> b + walk n d + sum n d)
+       0
+       densities
+  in
+  Format.printf "%d\n" r
+;;
+
+let () =
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
+;;

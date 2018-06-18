@@ -63,7 +63,7 @@ let make_complicated_benchs s x =
     check,
     Short)
 
-let () = add [
+let benches = [
   make_simple_benchs "" true ;
   make_simple_benchs "" false ;
   (b:= true ; make_simple_benchs "_ref" !b) ;
@@ -73,3 +73,25 @@ let () = add [
   make_complicated_benchs "_empty" [] ;
 
 ]
+
+let () =
+  for i = 1 to (int_of_string Sys.argv.(1)) do
+    List.iter (function
+        | Unit_group (fns, chk, _) ->
+          List.iter (fun (_, f) ->
+            begin match chk (f ()) with
+            | Ok  -> ()
+            | Error e ->  ()
+            end)
+          fns
+        | _ -> assert false)
+      (List.map snd benches)
+  done
+;;
+
+let () =
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()

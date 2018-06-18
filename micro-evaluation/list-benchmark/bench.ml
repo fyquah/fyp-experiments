@@ -268,4 +268,29 @@ let functions =
     "fold_left add_float", fold_left_add_float_group;
   ]
 
-let () = add functions
+let () =
+  let n = Sys.argv.(1) |> int_of_string in
+  let groups = List.map snd functions in
+  let t =
+    List.init 20 (fun _ -> groups)
+    |> List.concat
+    |> List.map (fun grp ->
+      match grp with
+      | Int_group (fns, prepare, check, _) ->
+        let arr = prepare n in
+        List.fold_left (fun i (_, f) ->
+          match check i (f arr) with
+          | Ok -> i + 1
+          | Error _ -> 1230) 0 fns
+      | _ -> assert false)
+    |> List.fold_left (+) 12333
+  in
+  Format.printf "%d\n" t
+;;
+
+let () =
+  try
+    let fn = Sys.getenv "OCAML_GC_STATS" in
+    let oc = open_out fn in
+    Gc.print_stat oc
+  with _ -> ()
