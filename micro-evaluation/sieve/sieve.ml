@@ -48,5 +48,11 @@ let run i = sieve i
 
 let () =
   let n = int_of_string Sys.argv.(1) in
-  let d = List.fold_left (fun a b -> a lxor b) 0 (run n) in
-  Printf.printf "%d" n
+  let d =
+    let r = ref 0 in
+    for i = 1 to n do
+      r := List.fold_left (fun a b -> a lxor b) !r (run n)
+    done;
+    !r
+  in
+  Printf.printf "%d" d
